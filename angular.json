@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "glk-game"
+  "defaultProject": "glk-game",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

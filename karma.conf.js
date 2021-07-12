@@ -9,9 +9,18 @@ module.exports = function (config) {
       require("karma-jasmine"),
       require("karma-firefox-launcher"),
       require("karma-jasmine-html-reporter"),
+      require('karma-sonarqube-unit-reporter'),
       require("karma-coverage"),
       require("@angular-devkit/build-angular/plugins/karma"),
     ],
+    sonarQubeUnitReporter: {
+      sonarQubeVersion: 'LATEST',
+      outputFile: 'coverage/sonar-test-reporter.xml',
+      overrideTestDescription: true,
+      testPaths: ['./src'],
+      testFilePattern: '.spec.ts',
+      useBrowserName: false
+    },
     client: {
       jasmine: {
         // you can add configuration options for Jasmine here
@@ -25,11 +34,11 @@ module.exports = function (config) {
       suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require("path").join(__dirname, "./coverage/glk-game"),
+      dir: require("path").join(__dirname, "./coverage"),
       subdir: ".",
-      reporters: [{ type: "html" }, { type: "text-summary" }],
+      reporters: [{ type: "lcov" }, { type: "text-summary" }],
     },
-    reporters: ["progress", "kjhtml"],
+    reporters: ["progress", "kjhtml", 'sonarqubeUnit'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

@@ -1,14 +1,17 @@
 # GlkGame
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+The official webpage that you find under https://glk.cevimail.ch
 
-## Development server
+Metrics: 
+[![Buildstatus](https://github.com/patrickuhlmann/glk-game/workflows/Build%20Main/badge.svg)](https://github.com/patrickuhlmann/glk-game/actions/workflows/build_main.yml)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=patrickuhlmann_glk-game&metric=coverage)](https://sonarcloud.io/dashboard?id=patrickuhlmann_glk-game)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=patrickuhlmann_glk-game&metric=ncloc)](https://sonarcloud.io/dashboard?id=patrickuhlmann_glk-game)
+
+## Development
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Build
 
@@ -22,3 +25,7 @@ docker run -it -p 8080:80 --rm --name glk-game glk-game/website
 ```
 
 The webpage is then available under localhost:8080
+
+## Test (on Heroku)
+
+https://glk-game.herokuapp.com/

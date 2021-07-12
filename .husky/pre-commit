@@ -2,3 +2,5 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npx lint-staged
+sed -i -e "s#https://nexus.uhlme.ch/repository/npm-group#https://registry.yarnpkg.com/#g" yarn.lock
+yarn test

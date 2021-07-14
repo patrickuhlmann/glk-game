@@ -4,3 +4,4 @@
 npx lint-staged
 sed -i -e "s#https://nexus.uhlme.ch/repository/npm-group#https://registry.yarnpkg.com/#g" yarn.lock
 yarn test
+git diff --name-only --cached --diff-filter=d | xargs -l git add

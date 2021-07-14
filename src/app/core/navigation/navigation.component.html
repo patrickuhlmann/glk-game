@@ -1,0 +1,37 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Aufgaben</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/tasks/horyzon">Horyzon</a>
+      <a mat-list-item routerLink="/tasks/cevi_alpin">Cevi Alpin</a>
+      <a mat-list-item routerLink="/tasks/cevi_militaer">Cevi Militär</a>
+      <a mat-list-item routerLink="/tasks/esg_unify">ESG, Unify</a>
+      <a mat-list-item routerLink="/tasks/ymca">YMCA</a>
+      <a mat-list-item routerLink="/tasks/ywca">YWCA</a>
+      <a mat-list-item routerLink="/tasks/ag_int">AG International</a>
+      <a mat-list-item routerLink="/tasks/vielfalt">Cevi Vielfalt</a>
+      <a mat-list-item routerLink="/tasks/regionen">Regionen</a>
+      <a mat-list-item routerLink="/tasks/cevi_schweiz">Cevi Schweiz</a>
+      <a mat-list-item routerLink="/tasks/hasliberg">Hasliberg</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>Cevi in der Region, Schweiz und International</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

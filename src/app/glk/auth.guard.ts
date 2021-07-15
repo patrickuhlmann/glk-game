@@ -7,12 +7,13 @@ import {
   UrlTree,
 } from '@angular/router';
 import { Observable } from 'rxjs';
+import { TaskService } from './task.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private taskService: TaskService) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -22,10 +23,11 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (state.url === '/tasks/horyzon') {
+    if (this.taskService.isUrlUnlocked(state.url)) {
       return true;
+    } else {
+      this.router.navigate(['/tasks/code']);
+      return false;
     }
-    this.router.navigate(['/tasks/code']);
-    return false;
   }
 }

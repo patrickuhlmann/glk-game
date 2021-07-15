@@ -1,51 +1,78 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GeneralTaskComponent } from './general-task/general-task.component';
+import { AgIntTaskComponent } from './ag-int-task/ag-int-task.component';
+import { AuthGuard } from './auth.guard';
+import { CeviAlpinTaskComponent } from './cevi-alpin-task/cevi-alpin-task.component';
+import { CeviMilitaerTaskComponent } from './cevi-militaer-task/cevi-militaer-task.component';
+import { CeviSchweizTaskComponent } from './cevi-schweiz-task/cevi-schweiz-task.component';
+import { CeviVielfaltTaskComponent } from './cevi-vielfalt-task/cevi-vielfalt-task.component';
+import { CodeComponent } from './code/code.component';
+import { EsgUnifyTaskComponent } from './esg-unify-task/esg-unify-task.component';
+import { HaslibergTaskComponent } from './hasliberg-task/hasliberg-task.component';
+import { HoryzonTaskComponent } from './horyzon-task/horyzon-task.component';
+import { RegionenTaskComponent } from './regionen-task/regionen-task.component';
+import { YmcaTaskComponent } from './ymca-task/ymca-task.component';
+import { YwcaTaskComponent } from './ywca-task/ywca-task.component';
 
 const routes: Routes = [
   {
     path: 'horyzon',
-    component: GeneralTaskComponent,
+    component: HoryzonTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'cevi_alpin',
-    component: GeneralTaskComponent,
+    component: CeviAlpinTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'cevi_militaer',
-    component: GeneralTaskComponent,
+    component: CeviMilitaerTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'esg_unify',
-    component: GeneralTaskComponent,
+    component: EsgUnifyTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'ymca',
-    component: GeneralTaskComponent,
+    component: YmcaTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'ywca',
-    component: GeneralTaskComponent,
+    component: YwcaTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'ag_int',
-    component: GeneralTaskComponent,
+    component: AgIntTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'vielfalt',
-    component: GeneralTaskComponent,
+    component: CeviVielfaltTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'regionen',
-    component: GeneralTaskComponent,
+    component: RegionenTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'cevi_schweiz',
-    component: GeneralTaskComponent,
+    component: CeviSchweizTaskComponent,
+    canActivate: [AuthGuard],
   },
   {
     path: 'hasliberg',
-    component: GeneralTaskComponent,
+    component: HaslibergTaskComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'code',
+    component: CodeComponent,
   },
 ];
 

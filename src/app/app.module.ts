@@ -19,6 +19,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './core/home/home.component';
+import { GlkModule } from './glk/glk.module';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent, HomeComponent],
@@ -41,6 +42,7 @@ import { HomeComponent } from './core/home/home.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    GlkModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

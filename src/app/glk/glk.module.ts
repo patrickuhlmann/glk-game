@@ -11,6 +11,10 @@ import { CeviVielfaltTaskComponent } from './cevi-vielfalt-task/cevi-vielfalt-ta
 import { RegionenTaskComponent } from './regionen-task/regionen-task.component';
 import { CeviSchweizTaskComponent } from './cevi-schweiz-task/cevi-schweiz-task.component';
 import { HaslibergTaskComponent } from './hasliberg-task/hasliberg-task.component';
+import { CodeComponent } from './code/code.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { HaslibergTaskComponent } from './hasliberg-task/hasliberg-task.componen
     RegionenTaskComponent,
     CeviSchweizTaskComponent,
     HaslibergTaskComponent,
+    CodeComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, MatInputModule, FormsModule, MatSnackBarModule],
 })
 export class GlkModule {}

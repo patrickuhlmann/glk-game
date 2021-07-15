@@ -6,6 +6,7 @@ import { CeviAlpinTaskComponent } from './cevi-alpin-task/cevi-alpin-task.compon
 import { CeviMilitaerTaskComponent } from './cevi-militaer-task/cevi-militaer-task.component';
 import { CeviSchweizTaskComponent } from './cevi-schweiz-task/cevi-schweiz-task.component';
 import { CeviVielfaltTaskComponent } from './cevi-vielfalt-task/cevi-vielfalt-task.component';
+import { CheatComponent } from './cheat/cheat.component';
 import { CodeComponent } from './code/code.component';
 import { EsgUnifyTaskComponent } from './esg-unify-task/esg-unify-task.component';
 import { HaslibergTaskComponent } from './hasliberg-task/hasliberg-task.component';
@@ -73,6 +74,10 @@ const routes: Routes = [
   {
     path: 'code',
     component: CodeComponent,
+  },
+  {
+    path: 'cheat',
+    component: CheatComponent,
   },
 ];
 

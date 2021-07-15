@@ -14,7 +14,9 @@ import { HaslibergTaskComponent } from './hasliberg-task/hasliberg-task.componen
 import { CodeComponent } from './code/code.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
+import { CheatComponent } from './cheat/cheat.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,14 @@ import { FormsModule } from '@angular/forms';
     CeviSchweizTaskComponent,
     HaslibergTaskComponent,
     CodeComponent,
+    CheatComponent,
   ],
-  imports: [CommonModule, MatInputModule, FormsModule, MatSnackBarModule],
+  imports: [
+    CommonModule,
+    MatInputModule,
+    FormsModule,
+    MatSnackBarModule,
+    MatTableModule,
+  ],
 })
 export class GlkModule {}

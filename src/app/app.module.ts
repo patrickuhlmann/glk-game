@@ -20,9 +20,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './core/home/home.component';
 import { GlkModule } from './glk/glk.module';
+import { VersionComponent } from './core/version/version.component';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    HomeComponent,
+    VersionComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -4,6 +4,10 @@
 
 export const environment = {
   production: false,
+  environment: 'local',
+  version: 'n/a',
+  creationDate: 'n/a',
+  gitRevision: 'n/a',
 };
 
 /*

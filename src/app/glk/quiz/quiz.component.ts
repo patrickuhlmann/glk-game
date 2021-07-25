@@ -3,16 +3,32 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Question } from '../model/question';
 import { Quiz } from '../model/quiz';
 import { Task } from '../model/task';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.scss'],
 })
-export class QuizComponent {
+export class QuizComponent implements OnInit {
   @Input() task: Task = { quiz: { questions: [] } as Quiz } as Task;
 
-  constructor(private snackBar: MatSnackBar) {}
+  constructor(
+    private snackBar: MatSnackBar,
+    private taskService: TaskService
+  ) {}
+
+  ngOnInit(): void {
+    if (this.task.solved) {
+      this.task.quiz.questions.forEach((q) =>
+        q.answers.forEach((a) => {
+          if (a.isCorrect) {
+            a.checked = true;
+          }
+        })
+      );
+    }
+  }
 
   checkQuiz(quiz: Quiz): boolean {
     return quiz.questions.every((q) => this.checkQuestion(q));
@@ -40,6 +56,7 @@ export class QuizComponent {
         '',
         { duration: 3000 }
       );
+      this.taskService.solveTask(this.task);
     } else {
       this.snackBar.open(
         'Folgende Fragen wurden nicht korrekt beantwortet: ' +

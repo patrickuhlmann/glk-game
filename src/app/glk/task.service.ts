@@ -238,4 +238,9 @@ export class TaskService {
     this.tasks.forEach((t) => (t.locked = true));
     this.storage.saveTaskState(this.tasks);
   }
+
+  public solveTask(task: Task) {
+    task.solved = true;
+    this.storage.saveTaskState(this.tasks);
+  }
 }

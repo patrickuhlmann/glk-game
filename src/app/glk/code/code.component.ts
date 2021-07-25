@@ -29,7 +29,7 @@ export class CodeComponent {
         '',
         { duration: 3000 }
       );
-      this.storageService.addUnlockedTask(task!);
+      this.taskService.unlockTask(task!);
       this.router.navigate([task!.link]);
     } else {
       this.snackBar.open('Leider ist der Code nicht korrekt.', '', {

@@ -1,25 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { StorageService } from './storage.service';
-import { Task } from './model/task';
 import { TaskService } from './task.service';
-import { Quiz } from './model/quiz';
 
 describe('TaskService', () => {
   let service: TaskService;
-  let mockStorageService: StorageService;
-  const tasks: Task[] = [
-    {
-      title: 'Horyzon',
-      link: '/tasks/horyzon',
-      code: 'WDZQ',
-      quiz: {} as Quiz,
-    },
-  ];
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(TaskService);
-    mockStorageService = TestBed.inject(StorageService);
   });
 
   it('should be created', () => {
@@ -35,12 +22,14 @@ describe('TaskService', () => {
   });
 
   it('should return false if a task is not unlocked', () => {
-    spyOn(mockStorageService, 'getUnlockedTasks').and.returnValue(tasks);
-    expect(service.isUrlUnlocked('/some')).toBe(false);
+    const task = service.getAllTasks().find((t) => t.link === '/tasks/horyzon');
+    task!.locked = true;
+    expect(service.isUrlUnlocked('/tasks/horyzon')).toBe(false);
   });
 
   it('should return true if a task is unlocked', () => {
-    spyOn(mockStorageService, 'getUnlockedTasks').and.returnValue(tasks);
+    const task = service.getAllTasks().find((t) => t.link === '/tasks/horyzon');
+    task!.locked = false;
     expect(service.isUrlUnlocked('/tasks/horyzon')).toBe(true);
   });
 });

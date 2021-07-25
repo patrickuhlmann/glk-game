@@ -105,60 +105,80 @@ export class TaskService {
     link: '/tasks/horyzon',
     code: 'WDZQ',
     quiz: TaskService.HORYZON_QUIZ,
+    locked: true,
+    solved: false,
   };
   public static CEVI_ALPIN_TASK = {
     title: 'Cevi Alpin',
     link: '/tasks/cevi_alpin',
     code: 'JTRM',
     quiz: TaskService.CEVI_ALPIN_QUIZ,
+    locked: true,
+    solved: false,
   };
   public static CEVI_MILITAER_TASK = {
     title: 'Cevi Militär',
     link: '/tasks/cevi_militaer',
     code: 'NFAA',
     quiz: TaskService.CEVI_MILITAER_QUIZ,
+    locked: true,
+    solved: false,
   };
   public static ESG_UNIFY_TASK = {
     title: 'ESG, Unify',
     link: '/tasks/esg_unify',
     code: 'GGUB',
     quiz: TaskService.ESG_UNIFY_QUIZ,
+    locked: true,
+    solved: false,
   };
   public static YMCA_TASK = {
     title: 'YMCA',
     link: '/tasks/ymca',
     code: 'TUTM',
     quiz: TaskService.YMCA_QUIZ,
+    locked: true,
+    solved: false,
   };
   public static YWCA_TASK = {
     title: 'YWCA',
     link: '/tasks/ywca',
     code: 'FXKN',
     quiz: TaskService.YWCA_QUIZ,
+    locked: true,
+    solved: false,
   };
   public static AG_INT_TASK = {
     title: 'AG International',
     link: '/tasks/ag_int',
     code: 'YWUJ',
     quiz: TaskService.AG_INT_QUIZ,
+    locked: true,
+    solved: false,
   };
   public static CEVI_VIELFALT_TASK = {
     title: 'Cevi Vielfalt',
     link: '/tasks/vielfalt',
     code: 'PNAL',
     quiz: TaskService.CEVI_VIELFALT_QUIZ,
+    locked: true,
+    solved: false,
   };
   public static REGIONEN_TASK = {
     title: 'Regionen',
     link: '/tasks/regionen',
     code: 'MLGB',
     quiz: TaskService.REGIONEN_QUIZ,
+    locked: true,
+    solved: false,
   };
   public static CEVI_SCHWEIZ_TASK = {
     title: 'Cevi Schweiz',
     link: '/tasks/cevi_schweiz',
     code: 'XKJW',
     quiz: TaskService.CEVI_SCHWEIZ_QUIZ,
+    locked: true,
+    solved: false,
   };
 
   private tasks: Task[] = [
@@ -176,6 +196,21 @@ export class TaskService {
 
   constructor(private storage: StorageService) {}
 
+  public init() {
+    const taskState = this.storage.getTaskState();
+    if (taskState !== null) {
+      this.tasks.forEach((t) => {
+        const state = taskState.find(
+          (ts) => ts !== null && ts.identifier === t.title
+        );
+        if (state !== undefined) {
+          t.locked = state.locked;
+          t.solved = state.solved;
+        }
+      });
+    }
+  }
+
   public getAllTasks(): Task[] {
     return this.tasks;
   }
@@ -185,11 +220,22 @@ export class TaskService {
   }
 
   public isUrlUnlocked(url: string): boolean {
-    const unlockedTasks = this.storage.getUnlockedTasks();
-    if (unlockedTasks == null) {
-      return false;
-    }
-    const uriTask = unlockedTasks.find((t) => t.link == url);
-    return uriTask != null;
+    const task = this.tasks.find((t) => t.link === url);
+    return task !== undefined && !task.locked;
+  }
+
+  public unlockTask(task: Task) {
+    task.locked = false;
+    this.storage.saveTaskState(this.tasks);
+  }
+
+  public unlockAllTasks() {
+    this.tasks.forEach((t) => (t.locked = false));
+    this.storage.saveTaskState(this.tasks);
+  }
+
+  public lockAllTasks() {
+    this.tasks.forEach((t) => (t.locked = true));
+    this.storage.saveTaskState(this.tasks);
   }
 }

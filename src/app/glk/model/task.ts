@@ -5,4 +5,6 @@ export interface Task {
   link: string;
   code: string;
   quiz: Quiz;
+  locked: boolean;
+  solved: boolean;
 }

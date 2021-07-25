@@ -8,7 +8,7 @@
     </mat-nav-list>
     <mat-toolbar>Aufgaben</mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let task of tasks; let i = index" mat-list-item [routerLink]="task.link">{{ i+1 }}) {{ task.title }}</a>
+      <a *ngFor="let task of tasks; let i = index" mat-list-item [routerLink]="task.link"><mat-icon *ngIf="task.locked" aria-hidden="false" aria-label="gesperrt">lock</mat-icon> {{ i+1 }}) {{ task.title }}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

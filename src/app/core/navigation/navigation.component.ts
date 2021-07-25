@@ -5,6 +5,7 @@ import { filter, map, shareReplay, withLatestFrom } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationEnd, Router } from '@angular/router';
 import { routerReducer } from '@ngrx/router-store';
+import { TaskService } from 'src/app/glk/task.service';
 
 @Component({
   selector: 'app-navigation',
@@ -17,16 +18,16 @@ export class NavigationComponent implements AfterViewInit {
   router: Router;
 
   public tasks = [
-    { title: 'Horyzon', link: '/tasks/horyzon' },
-    { title: 'Cevi Alpin', link: '/tasks/cevi_alpin' },
-    { title: 'Cevi Militär', link: '/tasks/cevi_militaer' },
-    { title: 'ESG, Unify', link: '/tasks/esg_unify' },
-    { title: 'YMCA', link: '/tasks/ymca' },
-    { title: 'YWCA', link: '/tasks/ywca' },
-    { title: 'AG International', link: '/tasks/ag_int' },
-    { title: 'Cevi Vielfalt', link: '/tasks/vielfalt' },
-    { title: 'Regionen', link: '/tasks/regionen' },
-    { title: 'Cevi Schweiz', link: '/tasks/cevi_schweiz' },
+    TaskService.HORYZON_TASK,
+    TaskService.CEVI_ALPIN_TASK,
+    TaskService.CEVI_MILITAER_TASK,
+    TaskService.ESG_UNIFY_TASK,
+    TaskService.YMCA_TASK,
+    TaskService.YWCA_TASK,
+    TaskService.AG_INT_TASK,
+    TaskService.CEVI_VIELFALT_TASK,
+    TaskService.REGIONEN_TASK,
+    TaskService.CEVI_SCHWEIZ_TASK,
   ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver

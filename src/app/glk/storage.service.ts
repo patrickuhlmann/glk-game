@@ -1,39 +1,35 @@
 import { Injectable } from '@angular/core';
 import { Task } from './model/task';
+import { TaskState } from './model/taskState';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StorageService {
-  UNLOCKED_TASKS_KEY = 'unlockedTasks';
+  TASK_STATE_KEY = 'task_state';
 
   constructor() {}
 
-  getUnlockedTasks(): Task[] | null {
-    const data = localStorage.getItem(this.UNLOCKED_TASKS_KEY);
+  getTaskState(): TaskState[] | null {
+    const data = localStorage.getItem(this.TASK_STATE_KEY);
     if (data === null) {
       return null;
     } else {
-      return JSON.parse(data) as Task[];
+      return JSON.parse(data) as TaskState[];
     }
   }
 
-  clearUnlockedTasks() {
-    localStorage.removeItem(this.UNLOCKED_TASKS_KEY);
+  clearTasksState() {
+    localStorage.removeItem(this.TASK_STATE_KEY);
   }
 
-  addUnlockedTask(task: Task) {
-    const existingTasks = this.getUnlockedTasks();
-    if (existingTasks == null) {
-      this.setUnlockedTasks([task]);
-    } else if (existingTasks.find((t) => t.title === task.title) == null) {
-      existingTasks.push(task);
-      this.setUnlockedTasks(existingTasks);
-    }
-  }
-
-  setUnlockedTasks(data: Task[]) {
-    const jsonData = JSON.stringify(data);
-    localStorage.setItem(this.UNLOCKED_TASKS_KEY, jsonData);
+  saveTaskState(data: Task[]) {
+    const taskState = data.map((t) => ({
+      identifier: t.title,
+      solved: t.solved,
+      locked: t.locked,
+    }));
+    const jsonData = JSON.stringify(taskState);
+    localStorage.setItem(this.TASK_STATE_KEY, jsonData);
   }
 }

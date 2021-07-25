@@ -10,7 +10,6 @@ import { AgIntTaskComponent } from './ag-int-task/ag-int-task.component';
 import { CeviVielfaltTaskComponent } from './cevi-vielfalt-task/cevi-vielfalt-task.component';
 import { RegionenTaskComponent } from './regionen-task/regionen-task.component';
 import { CeviSchweizTaskComponent } from './cevi-schweiz-task/cevi-schweiz-task.component';
-import { HaslibergTaskComponent } from './hasliberg-task/hasliberg-task.component';
 import { CodeComponent } from './code/code.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -30,7 +29,6 @@ import { CheatComponent } from './cheat/cheat.component';
     CeviVielfaltTaskComponent,
     RegionenTaskComponent,
     CeviSchweizTaskComponent,
-    HaslibergTaskComponent,
     CodeComponent,
     CheatComponent,
   ],

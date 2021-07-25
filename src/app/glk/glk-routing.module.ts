@@ -9,7 +9,6 @@ import { CeviVielfaltTaskComponent } from './cevi-vielfalt-task/cevi-vielfalt-ta
 import { CheatComponent } from './cheat/cheat.component';
 import { CodeComponent } from './code/code.component';
 import { EsgUnifyTaskComponent } from './esg-unify-task/esg-unify-task.component';
-import { HaslibergTaskComponent } from './hasliberg-task/hasliberg-task.component';
 import { HoryzonTaskComponent } from './horyzon-task/horyzon-task.component';
 import { RegionenTaskComponent } from './regionen-task/regionen-task.component';
 import { YmcaTaskComponent } from './ymca-task/ymca-task.component';
@@ -64,11 +63,6 @@ const routes: Routes = [
   {
     path: 'cevi_schweiz',
     component: CeviSchweizTaskComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'hasliberg',
-    component: HaslibergTaskComponent,
     canActivate: [AuthGuard],
   },
   {

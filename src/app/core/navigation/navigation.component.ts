@@ -27,7 +27,6 @@ export class NavigationComponent implements AfterViewInit {
     { title: 'Cevi Vielfalt', link: '/tasks/vielfalt' },
     { title: 'Regionen', link: '/tasks/regionen' },
     { title: 'Cevi Schweiz', link: '/tasks/cevi_schweiz' },
-    { title: 'Hasliberg', link: '/tasks/hasliberg' },
   ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver

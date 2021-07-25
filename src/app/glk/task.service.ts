@@ -239,6 +239,16 @@ export class TaskService {
     this.storage.saveTaskState(this.tasks);
   }
 
+  public solveAllTasks() {
+    this.tasks.forEach((t) => (t.solved = true));
+    this.storage.saveTaskState(this.tasks);
+  }
+
+  public unsolveAllTasks() {
+    this.tasks.forEach((t) => (t.solved = false));
+    this.storage.saveTaskState(this.tasks);
+  }
+
   public solveTask(task: Task) {
     task.solved = true;
     this.storage.saveTaskState(this.tasks);

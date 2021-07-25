@@ -17,13 +17,21 @@ export class CheatComponent {
     this.dataSource = new MatTableDataSource(taskService.getAllTasks());
   }
 
-  lockAllTasks() {
-    this.taskService.lockAllTasks();
-    this.snackBar.open('Alle Aufgaben gesperrt', '', { duration: 3000 });
-  }
-
   unlockAllTasks() {
     this.taskService.unlockAllTasks();
+    this.taskService.unsolveAllTasks();
     this.snackBar.open('Alle Aufgaben freigeschaltet', '', { duration: 3000 });
+  }
+
+  solveAllTasks() {
+    this.taskService.solveAllTasks();
+    this.taskService.unlockAllTasks();
+    this.snackBar.open('Alle Aufgaben gelöst', '', { duration: 3000 });
+  }
+
+  lockAllTasks() {
+    this.taskService.lockAllTasks();
+    this.taskService.unsolveAllTasks();
+    this.snackBar.open('Alle Aufgaben gesperrrt', '', { duration: 3000 });
   }
 }

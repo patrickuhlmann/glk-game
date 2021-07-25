@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-ywca-task',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ywca-task.component.scss'],
 })
 export class YwcaTaskComponent implements OnInit {
+  task = TaskService.YWCA_TASK;
+
   constructor() {}
 
   ngOnInit(): void {}

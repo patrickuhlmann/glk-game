@@ -10,7 +10,7 @@ import { Task } from '../model/task';
   styleUrls: ['./quiz.component.scss'],
 })
 export class QuizComponent {
-  @Input() task: Task = { quiz: {} as Quiz } as Task;
+  @Input() task: Task = { quiz: { questions: [] } as Quiz } as Task;
 
   constructor(private snackBar: MatSnackBar) {}
 

@@ -36,6 +36,5 @@ export class CodeComponent {
         duration: 5000,
       });
     }
-    console.log(this.code);
   }
 }

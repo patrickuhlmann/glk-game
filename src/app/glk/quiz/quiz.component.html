@@ -1,19 +1,21 @@
-<hr>
+<div *ngIf="task.quiz.questions.length > 0">
+  <hr>
 
-<mat-card class="card" *ngFor="let question of task.quiz.questions; let i = index">
-  <mat-card-header>
-    <mat-card-title>Frage {{ i+1 }}: {{ question.question }}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    <ul>
-      <li *ngFor="let answer of question.answers">
-        <mat-checkbox [(ngModel)]="answer.checked">
-          {{answer.answer }}
-        </mat-checkbox>
-      </li>
-    </ul>
-    <p *ngIf="question.hint !== ''">{{ question.hint }}</p>
-  </mat-card-content>
-</mat-card>
+  <mat-card class="card" *ngFor="let question of task.quiz.questions; let i = index">
+    <mat-card-header>
+      <mat-card-title>Frage {{ i+1 }}: {{ question.question }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let answer of question.answers">
+          <mat-checkbox [(ngModel)]="answer.checked">
+            {{answer.answer }}
+          </mat-checkbox>
+        </li>
+      </ul>
+      <p *ngIf="question.hint !== ''">{{ question.hint }}</p>
+    </mat-card-content>
+  </mat-card>
 
-<button (click)="check()" mat-raised-button color="primary">Quiz auswerten</button>
+  <button (click)="check()" mat-raised-button color="primary">Quiz auswerten</button>
+</div>

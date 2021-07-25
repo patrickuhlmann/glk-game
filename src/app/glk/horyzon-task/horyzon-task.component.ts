@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-horyzon-task',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./horyzon-task.component.scss'],
 })
 export class HoryzonTaskComponent implements OnInit {
+  task = TaskService.HORYZON_TASK;
+
   constructor() {}
 
   ngOnInit(): void {}

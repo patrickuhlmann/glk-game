@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-cevi-vielfalt-task',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cevi-vielfalt-task.component.scss'],
 })
 export class CeviVielfaltTaskComponent implements OnInit {
+  task = TaskService.CEVI_VIELFALT_TASK;
+
   constructor() {}
 
   ngOnInit(): void {}

@@ -15,7 +15,7 @@ describe('AuthService', () => {
   });
 
   it('should be true with valid code', () => {
-    expect(service.check('HASL')).toBe(true);
+    expect(service.check('TUTM')).toBe(true);
   });
 
   it('should be false with invalid code', () => {

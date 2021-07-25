@@ -2,12 +2,18 @@ import { TestBed } from '@angular/core/testing';
 import { StorageService } from './storage.service';
 import { Task } from './model/task';
 import { TaskService } from './task.service';
+import { Quiz } from './model/quiz';
 
 describe('TaskService', () => {
   let service: TaskService;
   let mockStorageService: StorageService;
   const tasks: Task[] = [
-    { title: 'Horyzon', link: '/tasks/horyzon', code: 'WDZQ' },
+    {
+      title: 'Horyzon',
+      link: '/tasks/horyzon',
+      code: 'WDZQ',
+      quiz: {} as Quiz,
+    },
   ];
 
   beforeEach(() => {
@@ -21,7 +27,7 @@ describe('TaskService', () => {
   });
 
   it('should return task with code', () => {
-    expect(service.taskFromCode('HASL')?.title).toBe('Hasliberg');
+    expect(service.taskFromCode('TUTM')?.title).toBe('YMCA');
   });
 
   it('should return undefined if code not found', () => {

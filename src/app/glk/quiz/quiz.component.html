@@ -1,0 +1,18 @@
+<hr>
+
+<mat-card class="card" *ngFor="let question of task.quiz.questions">
+  <mat-card-header>
+    <mat-card-title>{{ question.question }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ul>
+      <li *ngFor="let answer of question.answers">
+        <mat-checkbox [(ngModel)]="answer.checked">
+          {{answer.answer }}
+        </mat-checkbox>
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>
+
+<button (click)="check()" mat-raised-button color="primary">Quiz auswerten</button>

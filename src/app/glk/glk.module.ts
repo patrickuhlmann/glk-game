@@ -16,6 +16,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
 import { CheatComponent } from './cheat/cheat.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -31,13 +34,16 @@ import { CheatComponent } from './cheat/cheat.component';
     CeviSchweizTaskComponent,
     CodeComponent,
     CheatComponent,
+    QuizComponent,
   ],
   imports: [
     CommonModule,
     MatInputModule,
+    MatCheckboxModule,
     FormsModule,
     MatSnackBarModule,
     MatTableModule,
+    MatCardModule,
   ],
 })
 export class GlkModule {}

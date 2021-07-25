@@ -19,7 +19,7 @@ export class CheatComponent {
     private taskService: TaskService,
     private storageService: StorageService
   ) {
-    this.dataSource = new MatTableDataSource(taskService.tasks);
+    this.dataSource = new MatTableDataSource(taskService.getAllTasks());
   }
 
   lockAllTasks() {
@@ -28,7 +28,7 @@ export class CheatComponent {
   }
 
   unlockAllTasks() {
-    this.storageService.setUnlockedTasks(this.taskService.tasks);
+    this.storageService.setUnlockedTasks(this.taskService.getAllTasks());
     this.snackBar.open('Alle Aufgaben freigeschaltet', '', { duration: 3000 });
   }
 }

@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { Quiz } from './model/quiz';
 
 import { StorageService } from './storage.service';
 
@@ -21,7 +22,14 @@ describe('StorageService', () => {
   });
 
   it('should return the saved data', () => {
-    const tasks = [{ title: 'Horyzon', link: '/tasks/horyzon', code: 'WDZQ' }];
+    const tasks = [
+      {
+        title: 'Horyzon',
+        link: '/tasks/horyzon',
+        code: 'WDZQ',
+        quiz: {} as Quiz,
+      },
+    ];
     service.setUnlockedTasks(tasks);
     const retrievedTasks = service.getUnlockedTasks();
     if (retrievedTasks === null) {
@@ -33,7 +41,12 @@ describe('StorageService', () => {
   });
 
   it('should add task if not in list', () => {
-    const task = { title: 'Horyzon', link: '/tasks/horyzon', code: 'WDZQ' };
+    const task = {
+      title: 'Horyzon',
+      link: '/tasks/horyzon',
+      code: 'WDZQ',
+      quiz: {} as Quiz,
+    };
     service.addUnlockedTask(task);
     const retrievedTasks = service.getUnlockedTasks();
     if (retrievedTasks === null) {
@@ -45,8 +58,20 @@ describe('StorageService', () => {
   });
 
   it('should not add task if already in list', () => {
-    const task = { title: 'Horyzon', link: '/tasks/horyzon', code: 'WDZQ' };
-    const tasks = [{ title: 'Horyzon', link: '/tasks/horyzon', code: 'WDZQ' }];
+    const task = {
+      title: 'Horyzon',
+      link: '/tasks/horyzon',
+      code: 'WDZQ',
+      quiz: {} as Quiz,
+    };
+    const tasks = [
+      {
+        title: 'Horyzon',
+        link: '/tasks/horyzon',
+        code: 'WDZQ',
+        quiz: {} as Quiz,
+      },
+    ];
     service.setUnlockedTasks(tasks);
     service.addUnlockedTask(task);
     const retrievedTasks = service.getUnlockedTasks();

@@ -17,39 +17,52 @@ export class TaskService {
         answers: [
           {
             answer:
-              '«Herausgefordert und beschenkt durch Begegnungen mit Gott, miteinander und mit der Bergwelt!»',
+              'Herausgefordert und beschenkt durch Begegnungen mit Gott, miteinander und mit der Bergwelt!',
             checked: false,
             isCorrect: true,
           },
-          { answer: 'BlaBla', checked: false, isCorrect: false },
-          { answer: 'BlaBla', checked: false, isCorrect: false },
+          {
+            answer: 'Gemeinsam gehen wir hoch hinaus',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer:
+              'Bereichernde Erfahrungen, Kamaradschaftlichkeit und Begegnungen mit Gott',
+            checked: false,
+            isCorrect: false,
+          },
         ],
+        hint: 'Siehe Leitbild',
       },
       {
         question:
           'Wie findest du heraus, ob die Tour deinen Fähigkeiten entspricht?',
         answers: [
-          { answer: 'BlaBla', checked: false, isCorrect: false },
+          {
+            answer: 'Das sehe ich dann wenn ich teilnehme',
+            checked: false,
+            isCorrect: false,
+          },
           {
             answer:
-              'Einteilung in Schwierigkeitsstufen (A, B, C) und konditionelle Hinweise zur Länge der Tour.',
+              'Einteilung in Schwierigkeitsstufen (A, B, C) und konditionelle Hinweise zur Länge der Tour im Programm.',
             checked: false,
             isCorrect: true,
           },
           {
             answer:
-              'Die Schwierigkeitsstufen sind unter dem Programm erläutert.',
+              'Ich werde jeweils eingeladen, mein Betreuer schaut für mich.',
             checked: false,
-            isCorrect: true,
+            isCorrect: false,
           },
-          { answer: 'BlaBla', checked: false, isCorrect: false },
           {
-            answer:
-              'Melde dich im Zweifelsfall beim Tourenleiter, er kann dir weitere Infos geben.',
+            answer: 'Ich frage im Zweifelsfall beim Tourenleiter nach',
             checked: false,
             isCorrect: true,
           },
         ],
+        hint: '',
       },
       {
         question: 'Wie viel kostet der Jahresbeitrag?',
@@ -58,6 +71,7 @@ export class TaskService {
           { answer: '20 CHF', checked: false, isCorrect: false },
           { answer: '40 CHF', checked: false, isCorrect: true },
         ],
+        hint: '',
       },
     ],
   };

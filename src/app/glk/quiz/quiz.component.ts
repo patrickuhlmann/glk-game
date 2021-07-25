@@ -22,6 +22,17 @@ export class QuizComponent {
     return question.answers.every((a) => a.checked === a.isCorrect);
   }
 
+  wrongQuestions(quiz: Quiz): number[] {
+    const wrongQuestions = [];
+    for (let i = 0; i < quiz.questions.length; i++) {
+      if (!this.checkQuestion(quiz.questions[i])) {
+        wrongQuestions.push(i + 1);
+      }
+    }
+
+    return wrongQuestions;
+  }
+
   check() {
     if (this.checkQuiz(this.task.quiz)) {
       this.snackBar.open(
@@ -31,7 +42,9 @@ export class QuizComponent {
       );
     } else {
       this.snackBar.open(
-        'Leider ist Deine Lösung nicht korrekt. Versuche es erneut..',
+        'Folgende Fragen wurden nicht korrekt beantwortet: ' +
+          this.wrongQuestions(this.task.quiz).join(', ') +
+          '. Versuche es erneut..',
         '',
         {
           duration: 5000,

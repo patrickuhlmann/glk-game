@@ -1,8 +1,8 @@
 <hr>
 
-<mat-card class="card" *ngFor="let question of task.quiz.questions">
+<mat-card class="card" *ngFor="let question of task.quiz.questions; let i = index">
   <mat-card-header>
-    <mat-card-title>{{ question.question }}</mat-card-title>
+    <mat-card-title>Frage {{ i+1 }}: {{ question.question }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <ul>
@@ -12,6 +12,7 @@
         </mat-checkbox>
       </li>
     </ul>
+    <p *ngIf="question.hint !== ''">{{ question.hint }}</p>
   </mat-card-content>
 </mat-card>
 

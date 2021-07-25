@@ -5,6 +5,8 @@
       [opened]="(isHandset$ | async) === false">
     <mat-nav-list>
       <a mat-list-item routerLink="/">Erklärung</a>
+      <a mat-list-item *ngIf="isLocal()" routerLink="/tasks/cheat">Cheat</a>
+      <a mat-list-item *ngIf="isLocal()" routerLink="/version">Version</a>
     </mat-nav-list>
     <mat-toolbar>Aufgaben</mat-toolbar>
     <mat-nav-list>

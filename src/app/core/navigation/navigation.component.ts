@@ -1,11 +1,11 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
-import { filter, map, shareReplay, withLatestFrom } from 'rxjs/operators';
+import { map, shareReplay, withLatestFrom } from 'rxjs/operators';
 import { MatSidenav } from '@angular/material/sidenav';
-import { NavigationEnd, Router } from '@angular/router';
-import { routerReducer } from '@ngrx/router-store';
+import { Router } from '@angular/router';
 import { TaskService } from 'src/app/glk/task.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-navigation',
@@ -29,6 +29,10 @@ export class NavigationComponent implements AfterViewInit {
     TaskService.REGIONEN_TASK,
     TaskService.CEVI_SCHWEIZ_TASK,
   ];
+
+  isLocal() {
+    return environment.environment === 'local';
+  }
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)

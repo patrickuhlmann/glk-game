@@ -8,3 +8,13 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+/* Let the checkbox text wrap for mobile  */
+.mat-checkbox-layout { 
+  white-space: normal !important; 
+}
+
+/* Let the checkbox be in the first line instead of the center if it is wrapped */
+.mat-checkbox-inner-container {
+  margin-top: 3px !important;
+}

@@ -8,7 +8,98 @@ import { StorageService } from './storage.service';
 })
 export class TaskService {
   static HORYZON_QUIZ: Quiz = {
-    questions: [],
+    questions: [
+      {
+        question:
+          'Welche Projekte betreut Horyzon aktuell und in welchen Ländern werden sie durchgeführt?',
+        answers: [
+          {
+            answer:
+              'Espace Sûr - Ein sicherer Ort - Bildung für Mädchen und Junge Frauen in den Slums von Haiti.',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer:
+              'My Body, My Right, My Future - Jugendliche lernen, welche sexuellen und gesundheitlichen Rechte sie haben und welche Methoden der Familienplanung sie in Anspruch nehmen können, Südsudan.',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer:
+              'Gemeinsam für Frieden und Gerechtigkeit, Gemeinsam mit YGlobal Uganda befähigt Horyzon südsudanesische Jugendliche im Kiryandongo Flüchtlingscamp dazu, sich für Frieden und Gerechtigkeit in Uganda und im Südsudan einzusetzen.',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer:
+              'Paza la Paz - Ein Schritt zum Frieden - Bildung für sozial und wirtschaftlich benachteiligte Jugendliche in Armenquartieren Kolumbiens.',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer:
+              'Wiedereingliederungsprogramm: Wiedereingliederung von Jugendlichen mit Beeinträchtigungen und Traumata. Dieses Programm versucht, ihnen einen Wiedereinstieg in die soziale und berufliche Welt zu ermöglichen, Palästina.',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer:
+              'Joint Advocacy Initiative, Einsatz für Frieden und Menschenrechte. Ein Programm, welches weltweit die Menschen für die schwierige Situation der palästinensischen Bevölkerung sensibilisiert.',
+            checked: false,
+            isCorrect: true,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question:
+          'Wann und warum wurde der dezentrale, Schweiz weite Horyzon 2h-Lauf ins Leben gerufen?',
+        answers: [
+          {
+            answer:
+              '2015 als Reaktion auf die Kritik das gewisse Teilnehmer nicht am traditionellen 2h-Lauf partizipieren können.',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer:
+              'Im Jahr 2018 erarbeitete Horyzon ein Konzept zur Fortschreittenden Digitalisierung und der dezentrale Lauf war ein Produkt davon.',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer:
+              '2020 aufgrund der Corona-Pandemie, da viele traditionelle Sponsor*innenläufe nicht stattfinden konnten.',
+            checked: false,
+            isCorrect: true,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question:
+          'Horyzon bietet Mitgliedern von Jugendorganisationen und interessierten Jugendlichen Volontäreinsätze bei den Projektpartnern an. Wie lange dauert ein solches Volontariat in der Regel?',
+        answers: [
+          {
+            answer: '3-6 Monate',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Mind. ein Jahr',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'Das kann jeder selber wählen',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+    ],
   };
   static CEVI_ALPIN_QUIZ: Quiz = {
     questions: [

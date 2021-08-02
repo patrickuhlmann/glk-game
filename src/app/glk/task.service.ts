@@ -167,7 +167,121 @@ export class TaskService {
     ],
   };
   static CEVI_MILITAER_QUIZ: Quiz = {
-    questions: [],
+    questions: [
+      {
+        question:
+          'Unsere Stiftungsurkunde umschreibt den Zweck unserer Organisation, dieser lautet:',
+        answers: [
+          {
+            answer:
+              'A: Förderung des Wohlbefindens der Wehrpflichtigen in Kriegszeiten',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer:
+              'B: Förderung des Wohlbefindens der Wehrpflichtigen in Friedens- und Kriegszeiten',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer:
+              'C: Förderung des Wehrpflichtigen in Friedens- und Kriegszeiten ',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question:
+          'Der CEVIMIL unterstützt dienstleistende der Armee und des Zivildienstes in folgenden Bereichen:',
+        answers: [
+          {
+            answer: '1: Literatur – Freizeit – Beratung',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: '2: Beratung – Literatur – Familienferien',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: '3: Beratung – Freizeit – Stellensuche',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question:
+          'An welchem Wochentag ist unsere telefonische Beratungslinie bis um 23:30 Uhr erreichbar?',
+        answers: [
+          {
+            answer: 'X: Montag',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'R: Dienstag',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'S: Mittwoch',
+            checked: false,
+            isCorrect: true,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question: 'Wann wurde der Cevi Militär Service gegründet?',
+        answers: [
+          {
+            answer: '7: 1856',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: '8: 1913',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: '9: 1968',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question:
+          'Um vom Beratungsdienst des CEVIMIL profitieren zu können, muss man folgender Glaubensgemeinschaft angehören:',
+        answers: [
+          {
+            answer: 'a: christlich (bspw. katholisch, reformiert …)',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer:
+              'e: keiner (wir verstehen uns als überkonfessionelles Fürsorgewerk)',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'k: andere (beispielsweise muslimisch, jüdisch …)',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+    ],
   };
   static ESG_UNIFY_QUIZ: Quiz = {
     questions: [
@@ -382,13 +496,301 @@ export class TaskService {
     ],
   };
   static YWCA_QUIZ: Quiz = {
-    questions: [],
+    questions: [
+      {
+        question: 'Welche Länder haben den World YWCA gegründet?',
+        answers: [
+          {
+            answer: 'Schweiz',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'Grossbritannien',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Norwegen',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'Schweden',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'Deutschland',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'USA',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question: 'Wie viele Länder sind Mitglied im European YWCA?',
+        answers: [
+          {
+            answer: '27',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: '34',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: '28',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: '23',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question: 'Wer sind die Gründerinnen des YWCA?',
+        answers: [
+          {
+            answer: 'Miriam May',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'Lady Mary Kinnaird',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Emma Robarts',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Florence Vache',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'Matthias Kohl',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question:
+          'In Welchem Rhythmus  finde das General Assembly (GA) des YWCA statt?',
+        answers: [
+          {
+            answer: 'Jedes Jahr',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'Alle 2 Jahre',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Alle 4 Jahre',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+    ],
   };
   static AG_INT_QUIZ: Quiz = {
-    questions: [],
+    questions: [
+      {
+        question: 'Welchen Event betraf unser letzter Post auf Instagram',
+        answers: [
+          {
+            answer: 'YWCA Frauenwanderung',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'ESG Jamboree',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Das Norwegenlager',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question: 'Wer ist Mitglied in der AG International',
+        answers: [
+          {
+            answer: 'Bismarck',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Luchs',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Fuchs',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'Geier',
+            checked: false,
+            isCorrect: true,
+          },
+
+          {
+            answer: 'Bär',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question: 'Was ist der nächste Event der AG International?',
+        answers: [
+          {
+            answer: 'Grillieren in Deutschland',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'Besuch einer Delegation aus dem Kosovo',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: 'ESG Jamboree Onlinezusammenkunft',
+            checked: false,
+            isCorrect: true,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question: 'Wo kann ich mich über AG International Events informieren?',
+        answers: [
+          {
+            answer: 'AG International Abend vom 12. November',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Cevi Schweiz Blog',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: 'Anschlag auf der Toilette im Seki',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+    ],
   };
   static CEVI_VIELFALT_QUIZ: Quiz = {
-    questions: [],
+    questions: [
+      {
+        question: 'Wieviele Studenten nehmen am Y Learning teil?',
+        answers: [
+          {
+            answer: '500',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: '1000',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: '5000',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: '10000',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question:
+          'Wie hoch ist der Prozentsatz der Teilnehmer, die angeben durch das Diabetes Prevention Program über eine bessere Gesundheit zu verfügen?',
+        answers: [
+          {
+            answer: '91',
+            checked: false,
+            isCorrect: true,
+          },
+          {
+            answer: '80',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: '60',
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: '33.5',
+            checked: false,
+            isCorrect: false,
+          },
+        ],
+        hint: '',
+      },
+      {
+        question:
+          'Wie viele Übernachtungen gibt es pro Jahr in den Hotels und Youth Hostels des YMCA in England und Wales?',
+        answers: [
+          {
+            answer: "28'976",
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: "53'156",
+            checked: false,
+            isCorrect: false,
+          },
+          {
+            answer: "110'636",
+            checked: false,
+            isCorrect: true,
+          },
+        ],
+        hint: '',
+      },
+    ],
   };
   static REGIONEN_QUIZ: Quiz = {
     questions: [

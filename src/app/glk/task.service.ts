@@ -15,42 +15,30 @@ export class TaskService {
         answers: [
           {
             answer:
-              'Espace Sûr - Ein sicherer Ort - Bildung für Mädchen und Junge Frauen in den Slums von Haiti.',
+              'Haiti: Espace Sûr - Ein sicherer Ort - Bildung für Mädchen und Junge Frauen in den Slums von Haiti.',
             checked: false,
             isCorrect: true,
           },
           {
             answer:
-              'My Body, My Right, My Future - Jugendliche lernen, welche sexuellen und gesundheitlichen Rechte sie haben und welche Methoden der Familienplanung sie in Anspruch nehmen können, Südsudan.',
+              'Kolumbien: Paza la Paz - Ein Schritt zum Frieden - Bildung für sozial und wirtschaftlich benachteiligte Jugendliche in Armenquartieren Kolumbiens.',
             checked: false,
             isCorrect: true,
           },
           {
             answer:
-              'Gemeinsam für Frieden und Gerechtigkeit, Gemeinsam mit YGlobal Uganda befähigt Horyzon südsudanesische Jugendliche im Kiryandongo Flüchtlingscamp dazu, sich für Frieden und Gerechtigkeit in Uganda und im Südsudan einzusetzen.',
+              'Deutschland: Safe Home - Bezahlbarer Wohnraum - Unterstützt Familien mit geringem Einkommen bei der Wohnungssuche.',
             checked: false,
-            isCorrect: true,
+            isCorrect: false,
           },
           {
             answer:
-              'Paza la Paz - Ein Schritt zum Frieden - Bildung für sozial und wirtschaftlich benachteiligte Jugendliche in Armenquartieren Kolumbiens.',
-            checked: false,
-            isCorrect: true,
-          },
-          {
-            answer:
-              'Wiedereingliederungsprogramm: Wiedereingliederung von Jugendlichen mit Beeinträchtigungen und Traumata. Dieses Programm versucht, ihnen einen Wiedereinstieg in die soziale und berufliche Welt zu ermöglichen, Palästina.',
-            checked: false,
-            isCorrect: true,
-          },
-          {
-            answer:
-              'Joint Advocacy Initiative, Einsatz für Frieden und Menschenrechte. Ein Programm, welches weltweit die Menschen für die schwierige Situation der palästinensischen Bevölkerung sensibilisiert.',
+              'Südsudan: My Body, My Right, My Future - Jugendliche lernen, welche sexuellen und gesundheitlichen Rechte sie haben und welche Methoden der Familienplanung sie in Anspruch nehmen können, Südsudan.',
             checked: false,
             isCorrect: true,
           },
         ],
-        hint: '',
+        hint: 'Siehe unter Projekte + Themen / Engagement weltweit',
       },
       {
         question:
@@ -75,7 +63,7 @@ export class TaskService {
             isCorrect: true,
           },
         ],
-        hint: '',
+        hint: 'Siehe unter Spenden + Unterstützen / Horyzon 2h- Challenge',
       },
       {
         question:
@@ -97,7 +85,7 @@ export class TaskService {
             isCorrect: false,
           },
         ],
-        hint: '',
+        hint: 'Siehe unter Spenden + Unterstützen / Volontariat',
       },
     ],
   };
@@ -124,7 +112,7 @@ export class TaskService {
             isCorrect: false,
           },
         ],
-        hint: 'Siehe Leitbild',
+        hint: 'Siehe Verein / Leitbild',
       },
       {
         question:
@@ -191,7 +179,7 @@ export class TaskService {
             isCorrect: false,
           },
         ],
-        hint: '',
+        hint: 'Unter Ressourcen / Downloads findest du die Statuten.',
       },
       {
         question:
@@ -213,7 +201,7 @@ export class TaskService {
             isCorrect: false,
           },
         ],
-        hint: '',
+        hint: 'Siehe Über uns / Was wir tun',
       },
       {
         question:
@@ -235,7 +223,7 @@ export class TaskService {
             isCorrect: true,
           },
         ],
-        hint: '',
+        hint: 'Siehe Beratung',
       },
       {
         question: 'Wann wurde der Cevi Militär Service gegründet?',
@@ -256,7 +244,7 @@ export class TaskService {
             isCorrect: false,
           },
         ],
-        hint: '',
+        hint: 'Siehe Über uns / Geschichte',
       },
       {
         question:
@@ -342,13 +330,13 @@ export class TaskService {
             answer:
               'Es gibt einen Teil für Minderjährige und einen Teil für Erwachsene.',
             checked: false,
-            isCorrect: false,
+            isCorrect: true,
           },
           {
             answer:
               'Sowohl Minderjährige wie auch Erwachsene folgen demselben Programm',
             checked: false,
-            isCorrect: true,
+            isCorrect: false,
           },
         ],
         hint: '',
@@ -426,7 +414,7 @@ export class TaskService {
             answer:
               'Der YMCA setzt primär auf erfahrene Erwachsene, welche die Jungen motivieren und anleiten sollen.',
             checked: false,
-            isCorrect: true,
+            isCorrect: false,
           },
         ],
         hint: '',
@@ -513,12 +501,12 @@ export class TaskService {
           {
             answer: 'Norwegen',
             checked: false,
-            isCorrect: false,
+            isCorrect: true,
           },
           {
             answer: 'Schweden',
             checked: false,
-            isCorrect: false,
+            isCorrect: true,
           },
           {
             answer: 'Deutschland',
@@ -528,7 +516,7 @@ export class TaskService {
           {
             answer: 'USA',
             checked: false,
-            isCorrect: false,
+            isCorrect: true,
           },
         ],
         hint: '',
@@ -592,7 +580,7 @@ export class TaskService {
       },
       {
         question:
-          'In Welchem Rhythmus  finde das General Assembly (GA) des YWCA statt?',
+          'In elchem Rhythmus  finde das General Assembly (GA) des YWCA statt?',
         answers: [
           {
             answer: 'Jedes Jahr',
@@ -1118,7 +1106,9 @@ export class TaskService {
   }
 
   public taskFromCode(code: string): Task | undefined {
-    return this.tasks.find((t) => t.code === code);
+    return this.tasks.find(
+      (t) => t.code.toLocaleUpperCase() === code.toLocaleUpperCase()
+    );
   }
 
   public isUrlUnlocked(url: string): boolean {

@@ -12,6 +12,7 @@ import { TaskService } from '../task.service';
 })
 export class QuizComponent implements OnInit {
   @Input() task: Task = { quiz: { questions: [] } as Quiz } as Task;
+  @Input() minNumCorrect: number | undefined;
 
   constructor(
     private snackBar: MatSnackBar,
@@ -31,7 +32,14 @@ export class QuizComponent implements OnInit {
   }
 
   checkQuiz(quiz: Quiz): boolean {
-    return quiz.questions.every((q) => this.checkQuestion(q));
+    if (this.minNumCorrect === undefined) {
+      return quiz.questions.every((q) => this.checkQuestion(q));
+    } else {
+      return (
+        quiz.questions.filter((q) => this.checkQuestion(q)).length >=
+        this.minNumCorrect
+      );
+    }
   }
 
   checkQuestion(question: Question): boolean {

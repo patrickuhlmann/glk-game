@@ -939,10 +939,10 @@ export class TaskService {
             answer:
               'Der Cevi baut auf starke Strukturen und schlanke Beziehungen',
             checked: false,
-            isCorrect: false,
+            isCorrect: true,
           },
         ],
-        hint: 'Unter Portrait findet ihr das Leitbild, sowie die Strategie 2030 des Cevi Schweiz. Lest das Leitbild und schaut euch die 4 Hauptslogans der Strategie 2030 an.',
+        hint: 'Unter Cevi Schweiz / Portrait findet ihr das Leitbild. Weiter unten als PDF die Strategie 2030 des Cevi Schweiz. Lest das Leitbild und schaut euch die 4 Hauptslogans der Strategie 2030 an (S. 3 - 6).',
       },
       {
         question: 'Wann findet des Cevi-Tag 2021 statt?',
@@ -963,7 +963,7 @@ export class TaskService {
             isCorrect: false,
           },
         ],
-        hint: 'Events und Kurse: Die nationalen Events/Kurse des Cevi Schweiz, sowie deren Jahresplan findest du auf der Webseite unter Events und Ausbildung.',
+        hint: 'Events und Kurse: Die nationalen Events/Kurse des Cevi Schweiz, sowie deren Jahresplan findest du auf der Webseite unter Events und Ausbildung. Im PDF des Jahresplans ist der Cevitag aufgeführt.',
       },
       {
         question:
@@ -980,12 +980,13 @@ export class TaskService {
             isCorrect: false,
           },
           {
-            answer: 'Versicherungen, Krisenmanagement, Vereinsgründung',
+            answer:
+              'Haftpflichtversicherung, Sicherheitskonzept, Vereinsgründung',
             checked: false,
             isCorrect: true,
           },
         ],
-        hint: 'Hilfsmittel/ Themen/ Merkblätter: Verschaffe dir einen groben Überblick zu welchen Themen es hier Unterlagen gibt.',
+        hint: 'Hilfsmittel / Merkblätter / Reglemente: Verschaffe dir einen groben Überblick zu welchen Themen es hier Unterlagen gibt.',
       },
     ],
   };

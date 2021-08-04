@@ -939,7 +939,7 @@ export class TaskService {
             answer:
               'Der Cevi baut auf starke Strukturen und schlanke Beziehungen',
             checked: false,
-            isCorrect: true,
+            isCorrect: false,
           },
         ],
         hint: 'Unter Cevi Schweiz / Portrait findet ihr das Leitbild. Weiter unten als PDF die Strategie 2030 des Cevi Schweiz. Lest das Leitbild und schaut euch die 4 Hauptslogans der Strategie 2030 an (S. 3 - 6).',

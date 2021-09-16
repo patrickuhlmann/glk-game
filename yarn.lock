@@ -1573,7 +1573,7 @@
     eslint-scope "^5.1.1"
     eslint-utils "^3.0.0"
 
-"@typescript-eslint/experimental-utils@4.31.1", "@typescript-eslint/experimental-utils@^4.0.0", "@typescript-eslint/experimental-utils@^4.29.2":
+"@typescript-eslint/experimental-utils@4.31.1", "@typescript-eslint/experimental-utils@^4.0.0", "@typescript-eslint/experimental-utils@^4.31.1":
   version "4.31.1"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-4.31.1.tgz#0c900f832f270b88e13e51753647b02d08371ce5"
   integrity sha512-NtoPsqmcSsWty0mcL5nTZXMf7Ei0Xr2MT8jWjXMVgRK0/1qeQ2jZzLFUh4QtyJ4+/lPUyMw5cSfeeME+Zrtp9Q==
@@ -3490,13 +3490,13 @@ eslint-etc@^4.1.0:
     tsutils "^3.17.1"
     tsutils-etc "^1.3.4"
 
-eslint-plugin-ngrx@1.35.0:
-  version "1.35.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ngrx/-/eslint-plugin-ngrx-1.35.0.tgz#0da93c9247d7c2f66d37de5afeac45d63207ac04"
-  integrity sha512-6XejzTwintqXAUWDk+T4C5qTUua2HcxadjW9x2SAiFtyCb4He8R6vXXQxh5DnItqA/FIJFH3fyHk6QUOeqH+/A==
+eslint-plugin-ngrx@1.38.0:
+  version "1.38.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ngrx/-/eslint-plugin-ngrx-1.38.0.tgz#8e00be4a0a13f5355a4fd7d5bf120372eb102923"
+  integrity sha512-f91LG6Ch4H//0LYXSeCTm7JKe55+HF9Aoc9F5YrelEXfSSCLcUr1e6xQTtleb5yY3tb+RUhj441wZoXtoBIjUQ==
   dependencies:
     "@angular-devkit/schematics" "^12.2.2"
-    "@typescript-eslint/experimental-utils" "^4.29.2"
+    "@typescript-eslint/experimental-utils" "^4.31.1"
     eslint-etc "^4.1.0"
     eslint-plugin-rxjs "^3.3.6"
     tsutils-etc "^1.3.4"

@@ -1318,10 +1318,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/schematics@^12.4.0":
-  version "12.4.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-12.4.0.tgz#52985318669f20871419fd41f299178dda8eda43"
-  integrity sha512-+dkQQSZTCzt85gPhAtYByBYzYwvw/uO2RsFuPaLM5ZThbfK1JMtoaWegiIOd1lu/mvtYelc9EskLLyXSuEYBHQ==
+"@ngrx/schematics@^12.5.0":
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-12.5.0.tgz#280333e815cb359c89af5efb9ff515650fa89e84"
+  integrity sha512-lqIbsh/gYjyDvgrr4o7PvaxltHBdJqYCQ117JIRSP459xIceLCWq9dtJTF3oa0jsnvYYs6tivVKgufHJuT00qQ==
 
 "@ngrx/store-devtools@^12.3.0":
   version "12.3.0"

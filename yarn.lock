@@ -18,14 +18,6 @@
     "@angular-devkit/core" "12.2.10"
     rxjs "6.6.7"
 
-"@angular-devkit/architect@0.1202.9":
-  version "0.1202.9"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1202.9.tgz#de1bce9bd74e5310232c609c2881e37705b4ad84"
-  integrity sha512-s2NcFqZjsdYoR0vhJWLCwykF6hG7F0C5fJJs49i6IJMKj5Ai58z7d2IFYvD8nA60paMvjFS14OQ+E/FEEEZ88Q==
-  dependencies:
-    "@angular-devkit/core" "12.2.9"
-    rxjs "6.6.7"
-
 "@angular-devkit/build-angular@~12.2.10":
   version "12.2.10"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-12.2.10.tgz#aef9d1ab44e9f83dd8cd5625d7d10eaf81dd0e74"
@@ -124,18 +116,6 @@
   version "12.2.10"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-12.2.10.tgz#3da62eceef3904f92cd3f860618b4ae513029ce2"
   integrity sha512-0qhmS7Qvl0hiRVTHxEC/ipFAfzYofPstw0ZITDpEMw+pgHlOZolOlnFrv8LyOXWNqlSIH5fS9D3WF7Hpm7ApYA==
-  dependencies:
-    ajv "8.6.2"
-    ajv-formats "2.1.0"
-    fast-json-stable-stringify "2.1.0"
-    magic-string "0.25.7"
-    rxjs "6.6.7"
-    source-map "0.7.3"
-
-"@angular-devkit/core@12.2.9":
-  version "12.2.9"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-12.2.9.tgz#58f41ca4fea44307d90fb23af605ee06fe3c5552"
-  integrity sha512-iPHQiga08bbryiVq3QYzwpuq9sNb8CB/MVy65MHJ0fuW1z6RYDeUh1EziitBBUT2d81KWKPO1wQ2DuUoxOg4mg==
   dependencies:
     ajv "8.6.2"
     ajv-formats "2.1.0"
@@ -1338,10 +1318,10 @@
   dependencies:
     tslib "^2.0.0"
 
-"@ngrx/schematics@^12.4.0":
-  version "12.4.0"
-  resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-12.4.0.tgz#52985318669f20871419fd41f299178dda8eda43"
-  integrity sha512-+dkQQSZTCzt85gPhAtYByBYzYwvw/uO2RsFuPaLM5ZThbfK1JMtoaWegiIOd1lu/mvtYelc9EskLLyXSuEYBHQ==
+"@ngrx/schematics@^12.5.0":
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/schematics/-/schematics-12.5.0.tgz#280333e815cb359c89af5efb9ff515650fa89e84"
+  integrity sha512-lqIbsh/gYjyDvgrr4o7PvaxltHBdJqYCQ117JIRSP459xIceLCWq9dtJTF3oa0jsnvYYs6tivVKgufHJuT00qQ==
 
 "@ngrx/store-devtools@^12.3.0":
   version "12.3.0"

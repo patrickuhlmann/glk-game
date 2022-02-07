@@ -50,7 +50,7 @@
     "eslint-plugin-ngrx": "1.47.1",
     "husky": "^7.0.4",
     "jasmine-core": "~4.0.0",
-    "karma": "~6.3.13",
+    "karma": "~6.3.15",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
     "karma-firefox-launcher": "^2.1.2",

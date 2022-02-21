@@ -46,7 +46,7 @@
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
     "eslint": "^7.31.0",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-ngrx": "1.47.1",
     "husky": "^7.0.4",
     "jasmine-core": "~4.0.0",

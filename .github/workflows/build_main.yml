@@ -44,7 +44,6 @@ jobs:
 
     - name: set env variables
       run: |
-        sed -i "s#version: 'n/a'#version: '${{ steps.build_number.outputs.global_build_number }}'#g" src/environments/environment.prod.ts
         sed -i "s#creationDate: 'n/a'#creationDate: '${{ steps.date_and_rev.outputs.created }}'#g" src/environments/environment.prod.ts
         sed -i "s#gitRevision: 'n/a'#gitRevision: '${{ steps.date_and_rev.outputs.revision }}'#g" src/environments/environment.prod.ts
 

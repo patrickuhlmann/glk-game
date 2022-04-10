@@ -29,6 +29,8 @@ export class NavigationComponent implements AfterViewInit {
     TaskService.REGIONEN_TASK,
     TaskService.CEVI_SCHWEIZ_TASK,
   ];
+  public optionalTasks = this.tasks.filter((t) => t.optional);
+  public mandatoryTasks = this.tasks.filter((t) => !t.optional);
 
   isLocal() {
     return environment.environment === 'local';

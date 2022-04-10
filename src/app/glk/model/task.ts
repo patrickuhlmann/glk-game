@@ -7,4 +7,5 @@ export interface Task {
   quiz: Quiz;
   locked: boolean;
   solved: boolean;
+  optional: boolean;
 }

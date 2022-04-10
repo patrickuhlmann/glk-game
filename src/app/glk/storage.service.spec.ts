@@ -31,6 +31,7 @@ describe('StorageService', () => {
         quiz: {} as Quiz,
         locked: false,
         solved: true,
+        optional: false,
       },
     ];
     service.saveTaskState(tasks);

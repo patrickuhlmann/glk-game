@@ -998,6 +998,7 @@ export class TaskService {
     quiz: TaskService.HORYZON_QUIZ,
     locked: true,
     solved: false,
+    optional: true,
   };
   public static CEVI_ALPIN_TASK = {
     title: 'Cevi Alpin',
@@ -1006,6 +1007,7 @@ export class TaskService {
     quiz: TaskService.CEVI_ALPIN_QUIZ,
     locked: true,
     solved: false,
+    optional: true,
   };
   public static CEVI_MILITAER_TASK = {
     title: 'Cevi Militär',
@@ -1014,6 +1016,7 @@ export class TaskService {
     quiz: TaskService.CEVI_MILITAER_QUIZ,
     locked: true,
     solved: false,
+    optional: false,
   };
   public static ESG_UNIFY_TASK = {
     title: 'ESG, Unify',
@@ -1022,6 +1025,7 @@ export class TaskService {
     quiz: TaskService.ESG_UNIFY_QUIZ,
     locked: true,
     solved: false,
+    optional: false,
   };
   public static YMCA_TASK = {
     title: 'YMCA',
@@ -1030,6 +1034,7 @@ export class TaskService {
     quiz: TaskService.YMCA_QUIZ,
     locked: true,
     solved: false,
+    optional: false,
   };
   public static YWCA_TASK = {
     title: 'YWCA',
@@ -1038,6 +1043,7 @@ export class TaskService {
     quiz: TaskService.YWCA_QUIZ,
     locked: true,
     solved: false,
+    optional: false,
   };
   public static AG_INT_TASK = {
     title: 'AG International',
@@ -1046,6 +1052,7 @@ export class TaskService {
     quiz: TaskService.AG_INT_QUIZ,
     locked: true,
     solved: false,
+    optional: false,
   };
   public static CEVI_VIELFALT_TASK = {
     title: 'Cevi Vielfalt',
@@ -1054,6 +1061,7 @@ export class TaskService {
     quiz: TaskService.CEVI_VIELFALT_QUIZ,
     locked: true,
     solved: false,
+    optional: false,
   };
   public static REGIONEN_TASK = {
     title: 'Regionen',
@@ -1062,6 +1070,7 @@ export class TaskService {
     quiz: TaskService.REGIONEN_QUIZ,
     locked: true,
     solved: false,
+    optional: false,
   };
   public static CEVI_SCHWEIZ_TASK = {
     title: 'Cevi Schweiz',
@@ -1070,6 +1079,7 @@ export class TaskService {
     quiz: TaskService.CEVI_SCHWEIZ_QUIZ,
     locked: true,
     solved: false,
+    optional: false,
   };
 
   private tasks: Task[] = [

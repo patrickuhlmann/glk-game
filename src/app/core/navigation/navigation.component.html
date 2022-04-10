@@ -10,7 +10,14 @@
     </mat-nav-list>
     <mat-toolbar>Aufgaben</mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let task of tasks; let i = index" mat-list-item [routerLink]="task.link">
+      <a *ngFor="let task of mandatoryTasks; let i = index" mat-list-item [routerLink]="task.link">
+        <mat-icon *ngIf="task.locked" aria-hidden="false" aria-label="gesperrt">lock</mat-icon>
+        <mat-icon *ngIf="task.solved" aria-hidden="false" aria-label="gelöst">done</mat-icon>
+        {{ i+1 }}) {{ task.title }}</a>
+    </mat-nav-list>
+    <mat-toolbar *ngIf="optionalTasks.length > 0">Optional</mat-toolbar>
+    <mat-nav-list>
+      <a *ngFor="let task of optionalTasks; let i = index" mat-list-item [routerLink]="task.link">
         <mat-icon *ngIf="task.locked" aria-hidden="false" aria-label="gesperrt">lock</mat-icon>
         <mat-icon *ngIf="task.solved" aria-hidden="false" aria-label="gelöst">done</mat-icon>
         {{ i+1 }}) {{ task.title }}</a>

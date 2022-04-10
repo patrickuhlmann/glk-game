@@ -113,7 +113,7 @@ jobs:
           prerelease: false
 
       - name: Download dist
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: dist
           path: dist
@@ -123,7 +123,7 @@ jobs:
           (cd dist && zip -r ../dist.zip .)
 
       - name: Download unit test report
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: unit test coverage report
           path: coverage
@@ -161,12 +161,12 @@ jobs:
       url: "https://glk.cevimail.ch/"
     steps:
       - name: Download dist
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: dist
 
       - name: Download .htaccess
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: .htaccess
 

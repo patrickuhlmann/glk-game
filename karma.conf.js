@@ -1,27 +1,27 @@
-const { join } = require('path');
+const { join } = require("path");
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = function (config) {
   config.set({
     basePath: "",
-    files: [join(__dirname, 'karma.globals.js')],
+    files: [join(__dirname, "karma.globals.js")],
     frameworks: ["jasmine", "@angular-devkit/build-angular"],
     plugins: [
       require("karma-jasmine"),
       require("karma-firefox-launcher"),
       require("karma-jasmine-html-reporter"),
-      require('karma-sonarqube-unit-reporter'),
+      require("karma-sonarqube-unit-reporter"),
       require("karma-coverage"),
       require("@angular-devkit/build-angular/plugins/karma"),
     ],
     sonarQubeUnitReporter: {
-      sonarQubeVersion: 'LATEST',
-      outputFile: 'coverage/sonar-test-reporter.xml',
+      sonarQubeVersion: "LATEST",
+      outputFile: "coverage/sonar-test-reporter.xml",
       overrideTestDescription: true,
-      testPaths: ['./src'],
-      testFilePattern: '.spec.ts',
-      useBrowserName: false
+      testPaths: ["./src"],
+      testFilePattern: ".spec.ts",
+      useBrowserName: false,
     },
     client: {
       jasmine: {
@@ -40,7 +40,7 @@ module.exports = function (config) {
       subdir: ".",
       reporters: [{ type: "lcov" }, { type: "text-summary" }],
     },
-    reporters: ["progress", "kjhtml", 'sonarqubeUnit'],
+    reporters: ["progress", "kjhtml", "sonarqubeUnit"],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

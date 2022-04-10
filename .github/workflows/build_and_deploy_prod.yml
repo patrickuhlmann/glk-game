@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       dry-run:
-        description: 'Dry Run'
+        description: "Dry Run"
         required: false
         default: false
 
@@ -14,70 +14,70 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3.1.0
-      with:
-        node-version: 16.x
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3.1.0
+        with:
+          node-version: 16.x
 
-    - name: Get yarn cache directory path
-      id: yarn-cache-dir-path
-      run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
 
-    - uses: actions/cache@v3
-      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-      with:
-        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
+      - uses: actions/cache@v3
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
-    - name: "Install Dependencies"
-      run: yarn --frozen-lockfile
+      - name: "Install Dependencies"
+        run: yarn --frozen-lockfile
 
-    - name: generate build number
-      id: build_number
-      uses: zyborg/gh-action-buildnum@v1.2.0
-      with:
-        gist_token: ${{ secrets.GIST_TOKEN }}
+      - name: generate build number
+        id: build_number
+        uses: zyborg/gh-action-buildnum@v1.2.0
+        with:
+          gist_token: ${{ secrets.GIST_TOKEN }}
 
-    - name: get date and revision
-      id: date_and_rev
-      run: |
-        echo ::set-output name=revision::sha-${GITHUB_SHA::8}
-        echo ::set-output name=created::$(date -u +'%d.%m.%Y %H:%M:%S')
+      - name: get date and revision
+        id: date_and_rev
+        run: |
+          echo ::set-output name=revision::sha-${GITHUB_SHA::8}
+          echo ::set-output name=created::$(date -u +'%d.%m.%Y %H:%M:%S')
 
-    - name: set env variables
-      run: |
-        sed -i "s#version: 'n/a'#version: '${{ steps.build_number.outputs.global_build_number }}'#g" src/environments/environment.prod.ts
-        sed -i "s#creationDate: 'n/a'#creationDate: '${{ steps.date_and_rev.outputs.created }}'#g" src/environments/environment.prod.ts
-        sed -i "s#gitRevision: 'n/a'#gitRevision: '${{ steps.date_and_rev.outputs.revision }}'#g" src/environments/environment.prod.ts
+      - name: set env variables
+        run: |
+          sed -i "s#version: 'n/a'#version: '${{ steps.build_number.outputs.global_build_number }}'#g" src/environments/environment.prod.ts
+          sed -i "s#creationDate: 'n/a'#creationDate: '${{ steps.date_and_rev.outputs.created }}'#g" src/environments/environment.prod.ts
+          sed -i "s#gitRevision: 'n/a'#gitRevision: '${{ steps.date_and_rev.outputs.revision }}'#g" src/environments/environment.prod.ts
 
-    - name: "Build"
-      run: yarn run build
+      - name: "Build"
+        run: yarn run build
 
-    - name: Archive dist
-      uses: actions/upload-artifact@v2
-      with:
-        name: dist
-        path: dist
+      - name: Archive dist
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist
 
-    - name: Archive .htaccess
-      uses: actions/upload-artifact@v2
-      with:
-        name: .htaccess
-        path: .htaccess
+      - name: Archive .htaccess
+        uses: actions/upload-artifact@v2
+        with:
+          name: .htaccess
+          path: .htaccess
 
-    - name: "Unit Tests"
-      run: yarn run test
+      - name: "Unit Tests"
+        run: yarn run test
 
-    - name: Archive report
-      uses: actions/upload-artifact@v2
-      with:
-        name: unit test coverage report
-        path: coverage
+      - name: Archive report
+        uses: actions/upload-artifact@v2
+        with:
+          name: unit test coverage report
+          path: coverage
 
   release:
     name: "Create a release"

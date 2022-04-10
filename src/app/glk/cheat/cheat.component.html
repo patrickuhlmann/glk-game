@@ -3,20 +3,26 @@
 <table mat-table [dataSource]="dataSource">
   <ng-container matColumnDef="task">
     <th mat-header-cell *matHeaderCellDef>Aufgabe</th>
-    <td mat-cell *matCellDef="let task"> {{task.title}} </td>
+    <td mat-cell *matCellDef="let task">{{ task.title }}</td>
   </ng-container>
 
   <ng-container matColumnDef="code">
     <th mat-header-cell *matHeaderCellDef>Code</th>
-    <td mat-cell *matCellDef="let task"> {{task.code}} </td>
+    <td mat-cell *matCellDef="let task">{{ task.code }}</td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
 
 <div class="buttons">
-  <button (click)="lockAllTasks()" mat-raised-button color="primary">Alle Aufgaben sperren</button>
-  <button (click)="solveAllTasks()" mat-raised-button color="primary">Alle Aufgaben lösen</button>
-  <button (click)="unlockAllTasks()" mat-raised-button color="primary">Alle Aufgaben freischalten</button>
+  <button (click)="lockAllTasks()" mat-raised-button color="primary">
+    Alle Aufgaben sperren
+  </button>
+  <button (click)="solveAllTasks()" mat-raised-button color="primary">
+    Alle Aufgaben lösen
+  </button>
+  <button (click)="unlockAllTasks()" mat-raised-button color="primary">
+    Alle Aufgaben freischalten
+  </button>
 </div>

@@ -2,7 +2,7 @@
 
 The official webpage that you find under https://glk.cevimail.ch
 
-Metrics: 
+Metrics:
 [![Buildstatus](https://github.com/patrickuhlmann/glk-game/workflows/Build%20Main/badge.svg)](https://github.com/patrickuhlmann/glk-game/actions/workflows/build_main.yml)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=patrickuhlmann_glk-game&metric=coverage)](https://sonarcloud.io/dashboard?id=patrickuhlmann_glk-game)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=patrickuhlmann_glk-game&metric=ncloc)](https://sonarcloud.io/dashboard?id=patrickuhlmann_glk-game)

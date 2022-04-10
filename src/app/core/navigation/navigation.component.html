@@ -1,8 +1,12 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
     <mat-nav-list>
       <a mat-list-item routerLink="/">Erklärung</a>
       <a mat-list-item *ngIf="isLocal()" routerLink="/tasks/cheat">Cheat</a>
@@ -10,17 +14,35 @@
     </mat-nav-list>
     <mat-toolbar>Aufgaben</mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let task of mandatoryTasks; let i = index" mat-list-item [routerLink]="task.link">
-        <mat-icon *ngIf="task.locked" aria-hidden="false" aria-label="gesperrt">lock</mat-icon>
-        <mat-icon *ngIf="task.solved" aria-hidden="false" aria-label="gelöst">done</mat-icon>
-        {{ i+1 }}) {{ task.title }}</a>
+      <a
+        *ngFor="let task of mandatoryTasks; let i = index"
+        mat-list-item
+        [routerLink]="task.link"
+      >
+        <mat-icon *ngIf="task.locked" aria-hidden="false" aria-label="gesperrt"
+          >lock</mat-icon
+        >
+        <mat-icon *ngIf="task.solved" aria-hidden="false" aria-label="gelöst"
+          >done</mat-icon
+        >
+        {{ i + 1 }}) {{ task.title }}</a
+      >
     </mat-nav-list>
     <mat-toolbar *ngIf="optionalTasks.length > 0">Optional</mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let task of optionalTasks; let i = index" mat-list-item [routerLink]="task.link">
-        <mat-icon *ngIf="task.locked" aria-hidden="false" aria-label="gesperrt">lock</mat-icon>
-        <mat-icon *ngIf="task.solved" aria-hidden="false" aria-label="gelöst">done</mat-icon>
-        {{ i+1 }}) {{ task.title }}</a>
+      <a
+        *ngFor="let task of optionalTasks; let i = index"
+        mat-list-item
+        [routerLink]="task.link"
+      >
+        <mat-icon *ngIf="task.locked" aria-hidden="false" aria-label="gesperrt"
+          >lock</mat-icon
+        >
+        <mat-icon *ngIf="task.solved" aria-hidden="false" aria-label="gelöst"
+          >done</mat-icon
+        >
+        {{ i + 1 }}) {{ task.title }}</a
+      >
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -30,7 +52,8 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        *ngIf="isHandset$ | async"
+      >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>Cevi Schweiz und International</span>

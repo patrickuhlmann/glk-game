@@ -14,28 +14,28 @@ export class TaskService {
           'Welche Projekte betreut Horyzon aktuell und in welchen Ländern werden sie durchgeführt?',
         answers: [
           {
-            answer:
-              'Haiti: Espace Sûr - Ein sicherer Ort - Bildung für Mädchen und Junge Frauen in den Slums von Haiti.',
+            text: 'Haiti: Espace Sûr - Ein sicherer Ort - Bildung für Mädchen und Junge Frauen in den Slums von Haiti.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Kolumbien: Paza la Paz - Ein Schritt zum Frieden - Bildung für sozial und wirtschaftlich benachteiligte Jugendliche in Armenquartieren Kolumbiens.',
+            text: 'Kolumbien: Paza la Paz - Ein Schritt zum Frieden - Bildung für sozial und wirtschaftlich benachteiligte Jugendliche in Armenquartieren Kolumbiens.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Deutschland: Safe Home - Bezahlbarer Wohnraum - Unterstützt Familien mit geringem Einkommen bei der Wohnungssuche.',
+            text: 'Deutschland: Safe Home - Bezahlbarer Wohnraum - Unterstützt Familien mit geringem Einkommen bei der Wohnungssuche.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Südsudan: My Body, My Right, My Future - Jugendliche lernen, welche sexuellen und gesundheitlichen Rechte sie haben und welche Methoden der Familienplanung sie in Anspruch nehmen können, Südsudan.',
+            text: 'Südsudan: My Body, My Right, My Future - Jugendliche lernen, welche sexuellen und gesundheitlichen Rechte sie haben und welche Methoden der Familienplanung sie in Anspruch nehmen können, Südsudan.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe unter Projekte + Themen / Engagement weltweit',
@@ -45,22 +45,22 @@ export class TaskService {
           'Wann und warum wurde der dezentrale, Schweiz weite Horyzon 2h-Lauf ins Leben gerufen?',
         answers: [
           {
-            answer:
-              '2015 als Reaktion auf die Kritik das gewisse Teilnehmer nicht am traditionellen 2h-Lauf partizipieren können.',
+            text: '2015 als Reaktion auf die Kritik das gewisse Teilnehmer nicht am traditionellen 2h-Lauf partizipieren können.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Im Jahr 2018 erarbeitete Horyzon ein Konzept zur Fortschreittenden Digitalisierung und der dezentrale Lauf war ein Produkt davon.',
+            text: 'Im Jahr 2018 erarbeitete Horyzon ein Konzept zur Fortschreittenden Digitalisierung und der dezentrale Lauf war ein Produkt davon.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              '2020 aufgrund der Corona-Pandemie, da viele traditionelle Sponsor*innenläufe nicht stattfinden konnten.',
+            text: '2020 aufgrund der Corona-Pandemie, da viele traditionelle Sponsor*innenläufe nicht stattfinden konnten.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe unter Spenden + Unterstützen / Horyzon 2h- Challenge',
@@ -70,19 +70,22 @@ export class TaskService {
           'Horyzon bietet Mitgliedern von Jugendorganisationen und interessierten Jugendlichen Volontäreinsätze bei den Projektpartnern an. Wie lange dauert ein solches Volontariat in der Regel?',
         answers: [
           {
-            answer: '3-6 Monate',
+            text: '3-6 Monate',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Mind. ein Jahr',
+            text: 'Mind. ein Jahr',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Das kann jeder selber wählen',
+            text: 'Das kann jeder selber wählen',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe unter Spenden + Unterstützen / Volontariat',
@@ -95,21 +98,22 @@ export class TaskService {
         question: 'Wie lautet das Motto des Cevi Alpins?',
         answers: [
           {
-            answer:
-              'Herausgefordert und beschenkt durch Begegnungen mit Gott, miteinander und mit der Bergwelt!',
+            text: 'Herausgefordert und beschenkt durch Begegnungen mit Gott, miteinander und mit der Bergwelt!',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Gemeinsam gehen wir hoch hinaus',
+            text: 'Gemeinsam gehen wir hoch hinaus',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Bereichernde Erfahrungen, Kamaradschaftlichkeit und Begegnungen mit Gott',
+            text: 'Bereichernde Erfahrungen, Kamaradschaftlichkeit und Begegnungen mit Gott',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe Verein / Leitbild',
@@ -119,26 +123,28 @@ export class TaskService {
           'Wie findest du heraus, ob die Tour deinen Fähigkeiten entspricht?',
         answers: [
           {
-            answer: 'Das sehe ich dann wenn ich teilnehme',
+            text: 'Das sehe ich dann wenn ich teilnehme',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Einteilung in Schwierigkeitsstufen (A, B, C) und konditionelle Hinweise zur Länge der Tour im Programm.',
+            text: 'Einteilung in Schwierigkeitsstufen (A, B, C) und konditionelle Hinweise zur Länge der Tour im Programm.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Ich werde jeweils eingeladen, mein Betreuer schaut für mich.',
+            text: 'Ich werde jeweils eingeladen, mein Betreuer schaut für mich.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Ich frage im Zweifelsfall beim Tourenleiter nach',
+            text: 'Ich frage im Zweifelsfall beim Tourenleiter nach',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -146,9 +152,19 @@ export class TaskService {
       {
         question: 'Wie viel kostet der Jahresbeitrag?',
         answers: [
-          { answer: 'gratis', checked: false, isCorrect: false },
-          { answer: '20 CHF', checked: false, isCorrect: false },
-          { answer: '40 CHF', checked: false, isCorrect: true },
+          {
+            text: 'gratis',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: '20 CHF',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          { text: '40 CHF', checked: false, isCorrect: true, type: 'checkbox' },
         ],
         hint: '',
       },
@@ -161,22 +177,22 @@ export class TaskService {
           'Unsere Stiftungsurkunde umschreibt den Zweck unserer Organisation, dieser lautet:',
         answers: [
           {
-            answer:
-              'A: Förderung des Wohlbefindens der Wehrpflichtigen in Kriegszeiten',
+            text: 'A: Förderung des Wohlbefindens der Wehrpflichtigen in Kriegszeiten',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'B: Förderung des Wohlbefindens der Wehrpflichtigen in Friedens- und Kriegszeiten',
+            text: 'B: Förderung des Wohlbefindens der Wehrpflichtigen in Friedens- und Kriegszeiten',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'C: Förderung des Wehrpflichtigen in Friedens- und Kriegszeiten ',
+            text: 'C: Förderung des Wehrpflichtigen in Friedens- und Kriegszeiten ',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Unter Ressourcen / Downloads findest du die Statuten.',
@@ -186,19 +202,22 @@ export class TaskService {
           'Der CEVIMIL unterstützt dienstleistende der Armee und des Zivildienstes in folgenden Bereichen:',
         answers: [
           {
-            answer: '1: Literatur – Freizeit – Beratung',
+            text: '1: Literatur – Freizeit – Beratung',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: '2: Beratung – Literatur – Familienferien',
+            text: '2: Beratung – Literatur – Familienferien',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '3: Beratung – Freizeit – Stellensuche',
+            text: '3: Beratung – Freizeit – Stellensuche',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe Über uns / Was wir tun',
@@ -208,19 +227,22 @@ export class TaskService {
           'An welchem Wochentag ist unsere telefonische Beratungslinie bis um 23:30 Uhr erreichbar?',
         answers: [
           {
-            answer: 'X: Montag',
+            text: 'X: Montag',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'R: Dienstag',
+            text: 'R: Dienstag',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'S: Mittwoch',
+            text: 'S: Mittwoch',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe Beratung',
@@ -229,19 +251,22 @@ export class TaskService {
         question: 'Wann wurde der Cevi Militär Service gegründet?',
         answers: [
           {
-            answer: '7: 1856',
+            text: '7: 1856',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '8: 1913',
+            text: '8: 1913',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: '9: 1968',
+            text: '9: 1968',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe Über uns / Geschichte',
@@ -251,20 +276,22 @@ export class TaskService {
           'Um vom Beratungsdienst des CEVIMIL profitieren zu können, muss man folgender Glaubensgemeinschaft angehören:',
         answers: [
           {
-            answer: 'a: christlich (bspw. katholisch, reformiert …)',
+            text: 'a: christlich (bspw. katholisch, reformiert …)',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'e: keiner (wir verstehen uns als überkonfessionelles Fürsorgewerk)',
+            text: 'e: keiner (wir verstehen uns als überkonfessionelles Fürsorgewerk)',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'k: andere (beispielsweise muslimisch, jüdisch …)',
+            text: 'k: andere (beispielsweise muslimisch, jüdisch …)',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -277,37 +304,40 @@ export class TaskService {
         question: 'Welche Aussagen über den ESG Day sind korrekt?',
         answers: [
           {
-            answer: 'Der ESG Day findet jährlich statt.',
+            text: 'Der ESG Day findet jährlich statt.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Der ESG Day findet alle zwei Jahre statt.',
+            text: 'Der ESG Day findet alle zwei Jahre statt.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Der ESG Day wird jeweils vom ESG Commitee organisiert.',
+            text: 'Der ESG Day wird jeweils vom ESG Commitee organisiert.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Der ESG Day wird jeweils von einem gewählten Land (z. B. Deutschland, Frankreich, ...) organisiert.',
+            text: 'Der ESG Day wird jeweils von einem gewählten Land (z. B. Deutschland, Frankreich, ...) organisiert.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Ein wichtiger Bestandteil des ESG Day ist das Versenden von Postkarten an das organisierende Land.',
+            text: 'Ein wichtiger Bestandteil des ESG Day ist das Versenden von Postkarten an das organisierende Land.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Ein wichtiger Bestandteil des ESG Day ist ein Telefonat mit einer Gruppe aus einem anderen Land.',
+            text: 'Ein wichtiger Bestandteil des ESG Day ist ein Telefonat mit einer Gruppe aus einem anderen Land.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -317,50 +347,85 @@ export class TaskService {
           'Welche Aussagen über das ESG Leadership Training and Seminar sind korrekt?',
         answers: [
           {
-            answer: 'Das Treffen dauert jeweils eine Woche.',
+            text: 'Das Treffen dauert jeweils eine Woche.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Das Treffen dauert jeweils vier Tage.',
+            text: 'Das Treffen dauert jeweils vier Tage.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Es gibt einen Teil für Minderjährige und einen Teil für Erwachsene.',
+            text: 'Es gibt einen Teil für Minderjährige und einen Teil für Erwachsene.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Sowohl Minderjährige wie auch Erwachsene folgen demselben Programm',
+            text: 'Sowohl Minderjährige wie auch Erwachsene folgen demselben Programm',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
       },
-      {
+      /*{
         question: 'Welche Aussagen über das ESG Jamboree sind korrekt?',
         answers: [
           {
-            answer:
+            text:
               'Es handelt sich um ein Lager an welchem alle Jungscharen von Europa teilnehmen können.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
+            text:
               'Das Jamboree 2021 findet unter Berücksichtigung von Corona Massnahmen statt.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
+            text:
               'Anstelle des physischen Jamboree 2021 wurde ein Programmpackage zusammengestellt, welches diverse Aktivitäten beinhaltet',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
+          },
+        ],
+        hint: '',
+      },*/
+      {
+        question: 'Wann und wo findet das nächste ESG LTS statt?',
+        answers: [
+          {
+            text: 'September in Berlin',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: 'August in Köln/Cologne',
+            checked: false,
+            isCorrect: true,
+            type: 'checkbox',
+          },
+          {
+            text: 'August in München/Munich',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: 'September in Hamburg',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -369,19 +434,52 @@ export class TaskService {
         question: 'Auf welchen Ebenen finden Unify Konferenzen statt?',
         answers: [
           {
-            answer: 'National',
+            text: 'National',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Europäisch',
+            text: 'Europäisch',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Weltweit',
+            text: 'Weltweit',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
+          },
+        ],
+        hint: '',
+      },
+      {
+        question: 'Wo findet die nächste Unify-Konferenz statt?',
+        answers: [
+          {
+            text: 'Berlin',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: 'Wien',
+            checked: false,
+            isCorrect: true,
+            type: 'checkbox',
+          },
+          {
+            text: 'Zürich',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: 'Stockholm',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -394,27 +492,28 @@ export class TaskService {
         question: 'Welche Aussagen über den YMCA World sind korrekt?',
         answers: [
           {
-            answer: 'Das Hauptquartier befindet sich in Genf',
+            text: 'Das Hauptquartier befindet sich in Genf',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Es werden 5 der 17 United Nations Sustainable Development Goals (SDGs) abgedeckt',
+            text: 'Es werden 5 der 17 United Nations Sustainable Development Goals (SDGs) abgedeckt',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Die vier Hauptbereiche sind: Gesundheit, Arbeit, ziviles Engangement und Umwelt.',
+            text: 'Die vier Hauptbereiche sind: Gesundheit, Arbeit, ziviles Engangement und Umwelt.',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Der YMCA setzt primär auf erfahrene Erwachsene, welche die Jungen motivieren und anleiten sollen.',
+            text: 'Der YMCA setzt primär auf erfahrene Erwachsene, welche die Jungen motivieren und anleiten sollen.',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -423,34 +522,40 @@ export class TaskService {
         question: 'Welche Länder gehören zum YMCA Europe?',
         answers: [
           {
-            answer: 'Deutschland',
+            text: 'Deutschland',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Frankreich',
+            text: 'Frankreich',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Lichtenstein',
+            text: 'Lichtenstein',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Belgien',
+            text: 'Belgien',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Finnland',
+            text: 'Finnland',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Schweden',
+            text: 'Schweden',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -459,24 +564,28 @@ export class TaskService {
         question: 'Welche Programmgruppen führt der YMCA Europe?',
         answers: [
           {
-            answer: 'YMCA Civic Engagement Group',
+            text: 'YMCA Civic Engagement Group',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'YMCA Europe Working Group for Environment',
+            text: 'YMCA Europe Working Group for Environment',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'YMCA Europe Working Group on Refugees',
+            text: 'YMCA Europe Working Group on Refugees',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Volunteers for Europe',
+            text: 'Volunteers for Europe',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -489,34 +598,40 @@ export class TaskService {
         question: 'Welche Länder haben den World YWCA gegründet?',
         answers: [
           {
-            answer: 'Schweiz',
+            text: 'Schweiz',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Grossbritannien',
+            text: 'Grossbritannien',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Norwegen',
+            text: 'Norwegen',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Schweden',
+            text: 'Schweden',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Deutschland',
+            text: 'Deutschland',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'USA',
+            text: 'USA',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -525,24 +640,28 @@ export class TaskService {
         question: 'Wie viele Länder sind Mitglied im European YWCA?',
         answers: [
           {
-            answer: '27',
+            text: '27',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: '34',
+            text: '34',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '28',
+            text: '28',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '23',
+            text: '23',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -551,29 +670,34 @@ export class TaskService {
         question: 'Wer sind die Gründerinnen des YWCA?',
         answers: [
           {
-            answer: 'Miriam May',
+            text: 'Miriam May',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Lady Mary Kinnaird',
+            text: 'Lady Mary Kinnaird',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Emma Robarts',
+            text: 'Emma Robarts',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Florence Vache',
+            text: 'Florence Vache',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Matthias Kohl',
+            text: 'Matthias Kohl',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -583,19 +707,22 @@ export class TaskService {
           'In elchem Rhythmus  finde das General Assembly (GA) des YWCA statt?',
         answers: [
           {
-            answer: 'Jedes Jahr',
+            text: 'Jedes Jahr',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Alle 2 Jahre',
+            text: 'Alle 2 Jahre',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Alle 4 Jahre',
+            text: 'Alle 4 Jahre',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -605,75 +732,90 @@ export class TaskService {
   static AG_INT_QUIZ: Quiz = {
     questions: [
       {
-        question: 'Welchen Event betraf unser letzter Post auf Instagram',
+        question: 'Welches internationale Lager besucht Luchs als nächstes?',
         answers: [
           {
-            answer: 'YWCA Frauenwanderung',
-            checked: false,
-            isCorrect: false,
+            text: '',
+            solution: 'Kajo',
+            type: 'textbox',
           },
+        ],
+        hint: 'Du kannst ihn einfach fragen ;D',
+      },
+      {
+        question: 'Welches ist unsere aktuellste Insta-Story?',
+        answers: [
           {
-            answer: 'ESG Jamboree',
+            text: 'ESG LTS',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Das Norwegenlager',
+            text: 'Ag International Abend',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: 'Norwegenlager',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
       },
-      {
+      /*{
         question: 'Wer ist Mitglied in der AG International',
         answers: [
           {
-            answer: 'Bismarck',
+            text: 'Bismarck',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Luchs',
+            text: 'Luchs',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Fuchs',
+            text: 'Fuchs',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Geier',
-            checked: false,
-            isCorrect: true,
-          },
-
-          {
-            answer: 'Bär',
+            text: 'Bär',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
-      },
-      {
+      },*/
+      /*{
         question: 'Was ist der nächste Event der AG International?',
         answers: [
           {
-            answer: 'Grillieren in Deutschland',
+            text: 'Grillieren in Deutschland',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Besuch einer Delegation aus dem Kosovo',
+            text: 'Besuch einer Delegation aus dem Kosovo',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'ESG Jamboree Onlinezusammenkunft',
+            text: 'ESG Jamboree Onlinezusammenkunft',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -682,19 +824,76 @@ export class TaskService {
         question: 'Wo kann ich mich über AG International Events informieren?',
         answers: [
           {
-            answer: 'AG International Abend vom 12. November',
+            text: 'AG International Abend vom 12. November',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Cevi Schweiz Blog',
+            text: 'Cevi Schweiz Blog',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Anschlag auf der Toilette im Seki',
+            text: 'Anschlag auf der Toilette im Seki',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
+          },
+        ],
+        hint: '',
+      },*/
+      {
+        question:
+          'Welches internationale Lager besucht Bismarck bald bereits zum Dritten Mal?',
+        answers: [
+          {
+            text: '',
+            solution: 'Gnist',
+            type: 'textbox',
+          },
+        ],
+        hint: 'Du kannst ihn einfach fragen ;D',
+      },
+      {
+        question: 'Was macht die AG International?',
+        answers: [
+          {
+            text: 'Landesgrenze bewachen und alle die sich für den Cevi interessieren begrüssen',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: 'Blöcke in Leiterkursen',
+            checked: false,
+            isCorrect: true,
+            type: 'checkbox',
+          },
+          {
+            text: 'Jedes Jahr eine neue Sprache lernen',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: 'Internationale Lager besuchen',
+            checked: false,
+            isCorrect: true,
+            type: 'checkbox',
+          },
+          {
+            text: 'Alle Flughäfen der Welt einmal besuchen',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: 'Internationale Posten/Spiele an regionalen Anlässen',
+            checked: false,
+            isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -707,24 +906,28 @@ export class TaskService {
         question: 'Wieviele Studenten nehmen am Y Learning teil?',
         answers: [
           {
-            answer: '500',
+            text: '500',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '1000',
+            text: '1000',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: '5000',
+            text: '5000',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '10000',
+            text: '10000',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -734,24 +937,28 @@ export class TaskService {
           'Wie hoch ist der Prozentsatz der Teilnehmer, die angeben durch das Diabetes Prevention Program über eine bessere Gesundheit zu verfügen?',
         answers: [
           {
-            answer: '91',
+            text: '91',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: '80',
+            text: '80',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '60',
+            text: '60',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '33.5',
+            text: '33.5',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -761,19 +968,22 @@ export class TaskService {
           'Wie viele Übernachtungen gibt es pro Jahr in den Hotels und Youth Hostels des YMCA in England und Wales?',
         answers: [
           {
-            answer: "28'976",
+            text: "28'976",
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: "53'156",
+            text: "53'156",
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: "110'636",
+            text: "110'636",
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: '',
@@ -784,22 +994,25 @@ export class TaskService {
     questions: [
       {
         question:
-          'Wann findet der Taku Musik der Cevi Region Bern dieses Jahr statt?',
+          'Wann findet der IKU Musik der Cevi Region Bern dieses Jahr statt?',
         answers: [
           {
-            answer: '12.08.2021 08:00 - 15.08.2021',
+            text: '12.08.2022 08:00 - 15.08.2022',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '10.-17.10.2021',
+            text: '10.-17.10.2022',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '14.-17.10.2021',
+            text: '12.-15.10.2022',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe: Webseite der Region Bern unter Cevianerin/Kursangebot/Cevi Kurse',
@@ -808,19 +1021,22 @@ export class TaskService {
         question: 'Welchen Kurs bietet Outdoortech nicht an?',
         answers: [
           {
-            answer: 'Sarasani- und Seiltechnikkurs',
+            text: 'Sarasani- und Seiltechnikkurs',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Frauen Pioniertechnikkurs',
+            text: 'Frauen Pioniertechnikkurs',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Männer Pioniertechnikkurs',
+            text: 'Männer Pioniertechnikkurs',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe: Webseite von Outdoortech (Region Bern) unter Lager/ Kurse',
@@ -830,19 +1046,22 @@ export class TaskService {
           'Was ist die grosse Leidenschaft des Leitungsteams des Hattricks?',
         answers: [
           {
-            answer: 'Basketball und Kinder',
+            text: 'Basketball und Kinder',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Fussball und Jesus',
+            text: 'Fussball und Jesus',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Posaunen und Singen',
+            text: 'Posaunen und Singen',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe: Webseite des Cevi Basel unter Angebote',
@@ -852,19 +1071,22 @@ export class TaskService {
           'Ab welchem Alter, sollten Jungscharkinder nach dem Tatkundefilter das Alarmieren können?',
         answers: [
           {
-            answer: '10 Jahre',
+            text: '10 Jahre',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: '12 Jahre',
+            text: '12 Jahre',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: '13 Jahre',
+            text: '13 Jahre',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe: Webseite der Region Winterthur-Schaffhausen unter Cevi-Online/Tatkunde',
@@ -873,19 +1095,22 @@ export class TaskService {
         question: 'Wo ist das Ladenlokal des Cevi Zürich?',
         answers: [
           {
-            answer: 'Sihlstrasse 33, 8001 Zürich',
+            text: 'Sihlstrasse 33, 8001 Zürich',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Bahnhofstrasse 24, 8001 Zürich',
+            text: 'Bahnhofstrasse 24, 8001 Zürich',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Stauffacherstrasse 16, 8001 Zürich',
+            text: 'Stauffacherstrasse 16, 8001 Zürich',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe: Webseite der Cevi Zürich (Stadt) unter Angebote/Lokal/Ort/Standort',
@@ -894,19 +1119,22 @@ export class TaskService {
         question: 'Welches Rezept gibt es im Cevi Wiki?',
         answers: [
           {
-            answer: 'Älplermagronen hindersi',
+            text: 'Älplermagronen hindersi',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Chüssischlacht auf dem Feuer',
+            text: 'Chüssischlacht auf dem Feuer',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: 'Urchige Marshmallow-Sandwichs',
+            text: 'Urchige Marshmallow-Sandwichs',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Siehe: Webseite Cevi Wiki (Region Zürich) unter Rezepte',
@@ -920,47 +1148,52 @@ export class TaskService {
           'Welcher der folgenden Slogans steht in der Strategie 2030 des Cevi Schweiz?',
         answers: [
           {
-            answer: 'Der Cevi ist wirtschaftlich relevant',
+            text: 'Der Cevi ist wirtschaftlich relevant',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Der Cevi ist eine Gemeinschaft von Kindern und Jugendlichen',
+            text: 'Der Cevi ist eine Gemeinschaft von Kindern und Jugendlichen',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Der Cevi steht auf christlichem Fundament',
+            text: 'Der Cevi steht auf christlichem Fundament',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Der Cevi baut auf starke Strukturen und schlanke Beziehungen',
+            text: 'Der Cevi baut auf starke Strukturen und schlanke Beziehungen',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Unter Cevi Schweiz / Portrait findet ihr das Leitbild. Weiter unten als PDF die Strategie 2030 des Cevi Schweiz. Lest das Leitbild und schaut euch die 4 Hauptslogans der Strategie 2030 an (S. 3 - 6).',
       },
       {
-        question: 'Wann findet des Cevi-Tag 2021 statt?',
+        question: 'Wann findet des Cevi-Tag 2022 statt?',
         answers: [
           {
-            answer: '11. September 2021',
+            text: '10. September 2022',
+            checked: false,
+            isCorrect: false,
+            type: 'checkbox',
+          },
+          {
+            text: '17. September 2022',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
           {
-            answer: '18. September 2021',
+            text: '24. September 2022',
             checked: false,
             isCorrect: false,
-          },
-          {
-            answer: '25. September 2021',
-            checked: false,
-            isCorrect: false,
+            type: 'checkbox',
           },
         ],
         hint: 'Events und Kurse: Die nationalen Events/Kurse des Cevi Schweiz, sowie deren Jahresplan findest du auf der Webseite unter Events und Ausbildung. Im PDF des Jahresplans ist der Cevitag aufgeführt.',
@@ -970,20 +1203,22 @@ export class TaskService {
           'Welche Themenbereiche werden unter Hilfsmittel/Themen/Merkblätter aufgegriffen?',
         answers: [
           {
-            answer: 'LGBTQ, Interkulturelle Öffnung, Finanzen',
+            text: 'LGBTQ, Interkulturelle Öffnung, Finanzen',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer: 'Fröschli, Handbuch Abteilungsleitende, Prävention',
+            text: 'Fröschli, Handbuch Abteilungsleitende, Prävention',
             checked: false,
             isCorrect: false,
+            type: 'checkbox',
           },
           {
-            answer:
-              'Haftpflichtversicherung, Sicherheitskonzept, Vereinsgründung',
+            text: 'Haftpflichtversicherung, Sicherheitskonzept, Vereinsgründung',
             checked: false,
             isCorrect: true,
+            type: 'checkbox',
           },
         ],
         hint: 'Hilfsmittel / Merkblätter / Reglemente: Verschaffe dir einen groben Überblick zu welchen Themen es hier Unterlagen gibt.',

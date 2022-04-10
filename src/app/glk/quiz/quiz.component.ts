@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { CheckboxAnswer } from '../model/answer';
 import { Question } from '../model/question';
 import { Quiz } from '../model/quiz';
 import { Task } from '../model/task';
@@ -23,8 +24,16 @@ export class QuizComponent implements OnInit {
     if (this.task.solved) {
       this.task.quiz.questions.forEach((q) =>
         q.answers.forEach((a) => {
-          if (a.isCorrect) {
-            a.checked = true;
+          switch (a.type) {
+            case 'checkbox': {
+              if (a.isCorrect) {
+                a.checked = true;
+              }
+              break;
+            }
+            case 'textbox': {
+              a.text = a.solution;
+            }
           }
         })
       );
@@ -43,7 +52,14 @@ export class QuizComponent implements OnInit {
   }
 
   checkQuestion(question: Question): boolean {
-    return question.answers.every((a) => a.checked === a.isCorrect);
+    return question.answers.every((a) => {
+      switch (a.type) {
+        case 'checkbox':
+          return a.checked === a.isCorrect;
+        case 'textbox':
+          return a.text === a.solution;
+      }
+    });
   }
 
   wrongQuestions(quiz: Quiz): number[] {

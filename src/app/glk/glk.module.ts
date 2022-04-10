@@ -19,6 +19,7 @@ import { CheatComponent } from './cheat/cheat.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     MatSnackBarModule,
     MatTableModule,
+    MatIconModule,
     MatCardModule,
   ],
 })

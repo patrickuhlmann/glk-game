@@ -1,21 +1,51 @@
 <div *ngIf="task.quiz.questions.length > 0">
-  <hr>
+  <hr />
 
-  <mat-card class="card" *ngFor="let question of task.quiz.questions; let i = index">
+  <mat-card
+    class="card"
+    *ngFor="let question of task.quiz.questions; let i = index"
+  >
     <mat-card-header>
-      <mat-card-title>Frage {{ i+1 }}: {{ question.question }}</mat-card-title>
+      <mat-card-title
+        >Frage {{ i + 1 }}: {{ question.question }}</mat-card-title
+      >
     </mat-card-header>
     <mat-card-content>
       <ul>
         <li *ngFor="let answer of question.answers">
-          <mat-checkbox class="wrap" [(ngModel)]="answer.checked">
-            {{answer.answer }}
+          <mat-checkbox
+            *ngIf="answer.type === 'checkbox'"
+            class="wrap"
+            [(ngModel)]="answer.checked"
+          >
+            {{ answer.text }}
           </mat-checkbox>
+          <p
+            *ngIf="answer.type === 'textbox'"
+            style="display: flex; align-items: center"
+          >
+            <mat-icon
+              *ngIf="answer.text === answer.solution"
+              aria-hidden="false"
+              aria-label="gelöst"
+              style="margin-right: 0.1em"
+              >done</mat-icon
+            >
+            <input
+              [(ngModel)]="answer.text"
+              autocorrect="off"
+              spellcheck="false"
+              type="text"
+              matInput
+            />
+          </p>
         </li>
       </ul>
       <p *ngIf="question.hint !== ''">{{ question.hint }}</p>
     </mat-card-content>
   </mat-card>
 
-  <button (click)="check()" mat-raised-button color="primary">Quiz auswerten</button>
+  <button (click)="check()" mat-raised-button color="primary">
+    Quiz auswerten
+  </button>
 </div>

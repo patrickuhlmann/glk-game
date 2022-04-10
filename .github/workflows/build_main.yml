@@ -51,7 +51,7 @@ jobs:
         run: yarn run build
 
       - name: Archive dist
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: dist
           path: dist
@@ -60,7 +60,7 @@ jobs:
         run: yarn run test
 
       - name: Archive report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: unit test coverage report
           path: coverage

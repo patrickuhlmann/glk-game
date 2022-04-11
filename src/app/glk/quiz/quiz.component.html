@@ -10,42 +10,43 @@
         >Frage {{ i + 1 }}: {{ question.question }}</mat-card-title
       >
     </mat-card-header>
-    <mat-card-content>
-      <ul>
-        <li *ngFor="let answer of question.answers">
-          <mat-checkbox
-            *ngIf="answer.type === 'checkbox'"
-            class="wrap"
-            [(ngModel)]="answer.checked"
-          >
-            {{ answer.text }}
-          </mat-checkbox>
-          <p
-            *ngIf="answer.type === 'textbox'"
-            style="display: flex; align-items: center"
-          >
-            <mat-icon
-              *ngIf="answer.text === answer.solution"
-              aria-hidden="false"
-              aria-label="gelöst"
-              style="margin-right: 0.1em"
-              >done</mat-icon
-            >
-            <input
-              [(ngModel)]="answer.text"
-              autocorrect="off"
-              spellcheck="false"
-              type="text"
-              matInput
-            />
-          </p>
-        </li>
-      </ul>
-      <p *ngIf="question.hint !== ''">{{ question.hint }}</p>
+    <mat-card-content style="margin-left: 16px;">
+    <div *ngFor="let answer of question.answers">
+      <mat-checkbox
+        *ngIf="answer.type === 'checkbox'"
+        class="wrap"
+        [(ngModel)]="answer.checked"
+        [disabled]="task.solved"
+      >
+        {{ answer.text }}
+      </mat-checkbox>
+      <p
+        *ngIf="answer.type === 'textbox'"
+        style="display: flex; align-items: center"
+      >
+        <mat-icon
+          *ngIf="task.solved"
+          aria-hidden="false"
+          aria-label="gelöst"
+          style="margin-right: 0.1em"
+          >done</mat-icon
+        >
+        <input
+          [(ngModel)]="answer.text"
+          autocorrect="off"
+          spellcheck="false"
+          type="text"
+          matInput
+          [disabled]="task.solved"
+        />
+      </p>
+    </div>
+      <p *ngIf="question.hint !== ''">Tipp: {{ question.hint }}</p>
     </mat-card-content>
   </mat-card>
 
-  <button (click)="check()" mat-raised-button color="primary">
+  <button *ngIf="!task.solved" (click)="check()" mat-raised-button color="primary">
     Quiz auswerten
   </button>
+  <p *ngIf="task.solved">Du hast diese Aufgaben bereits gelöst.</p>
 </div>

@@ -21,6 +21,8 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './core/home/home.component';
 import { GlkModule } from './glk/glk.module';
 import { VersionComponent } from './core/version/version.component';
+import { NgxMatomoTrackerModule } from '@ngx-matomo/tracker';
+import { NgxMatomoRouterModule } from '@ngx-matomo/router';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,11 @@ import { VersionComponent } from './core/version/version.component';
     MatIconModule,
     MatListModule,
     GlkModule,
+    NgxMatomoTrackerModule.forRoot({
+      siteId: '21',
+      trackerUrl: 'https://matomo.cevi-buro-aarau.ch',
+    }),
+    NgxMatomoRouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

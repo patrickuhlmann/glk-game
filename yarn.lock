@@ -1483,6 +1483,20 @@
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-13.3.3.tgz#dc8471a89092d6f4074543c56a95ae0549f3470e"
   integrity sha512-O6EzafKfFuvI3Ju941u7ANs0mT7YDdChbVRhVECCPWOTm3Klr73js3bnCDzaJlxZNjzlG/KeUu5ghrhbMrHjSw==
 
+"@ngx-matomo/router@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com//@ngx-matomo/router/-/router-2.4.1.tgz#dae4f670d6b79104035f21ab9c68dc8b8a384be5"
+  integrity sha512-ZtOGBFN+kOvxdreCHy2hSGjUU6FfgCHlOs2wfdCrrKK/yqbiNCtS0J7jZzHTbVRGf39mQrF4LIKjumi38/r+hw==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngx-matomo/tracker@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com//@ngx-matomo/tracker/-/tracker-2.4.1.tgz#41d3f4997aa7e0e16db1d6f5aff617effb2f31f0"
+  integrity sha512-57UvT9rZ9FCX2x4sLZ8JCZxfqrrmH/aE/SSGFhL4Ih3hH9uMc5HzfYHVkltYMbS3NiGTGqQDbESihSYBaie9bg==
+  dependencies:
+    tslib "^2.0.0"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com//@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"

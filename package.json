@@ -27,6 +27,8 @@
     "@ngrx/router-store": "^12.3.0",
     "@ngrx/store": "^12.3.0",
     "@ngrx/store-devtools": "^12.3.0",
+    "@ngx-matomo/router": "^2.4.1",
+    "@ngx-matomo/tracker": "2.4.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.1",
     "zone.js": "~0.11.5"

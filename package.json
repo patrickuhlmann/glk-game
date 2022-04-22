@@ -30,7 +30,7 @@
     "@ngx-matomo/router": "^2.4.1",
     "@ngx-matomo/tracker": "2.4.1",
     "rxjs": "~6.6.0",
-    "tslib": "^2.3.1",
+    "tslib": "^2.4.0",
     "zone.js": "~0.11.5"
   },
   "devDependencies": {

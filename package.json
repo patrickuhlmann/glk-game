@@ -50,7 +50,7 @@
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-ngrx": "1.47.1",
-    "husky": "^8.0.0",
+    "husky": "^8.0.1",
     "jasmine-core": "~4.1.1",
     "karma": "~6.3.19",
     "karma-chrome-launcher": "~3.1.1",

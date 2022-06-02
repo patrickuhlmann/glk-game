@@ -59,7 +59,7 @@
     "karma-jasmine": "~5.0.1",
     "karma-jasmine-html-reporter": "^2.0.0",
     "karma-sonarqube-unit-reporter": "^0.0.23",
-    "lint-staged": "^12.5.0",
+    "lint-staged": "^13.0.0",
     "prettier": "2.6.2",
     "typescript": "~4.4.4"
   },

@@ -18,6 +18,14 @@
     "@angular-devkit/core" "13.3.7"
     rxjs "6.6.7"
 
+"@angular-devkit/architect@0.1303.8":
+  version "0.1303.8"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1303.8.tgz#7f1e02fff380b87910a7b57ec09e65c16db6fcbc"
+  integrity sha512-2zaNejnfZbq+fFOVgkmWkh+2UmK/CBDbWTq7VJHopJLtUuf7pFNvRk73s9xayuJ3Lt2/sY17Mykku2LziBF89A==
+  dependencies:
+    "@angular-devkit/core" "13.3.8"
+    rxjs "6.6.7"
+
 "@angular-devkit/build-angular@~13.3.7":
   version "13.3.7"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-13.3.7.tgz#7c9bcb1b2aa4bd2900aa42c5787b7609c0dcf788"
@@ -122,12 +130,24 @@
     rxjs "6.6.7"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@13.3.7":
-  version "13.3.7"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-13.3.7.tgz#d3f62ec32b707baf0c81eb1d12970c929f82ad98"
-  integrity sha512-6TKpFMwiiXmPhiVdbkSJrkBXj8n7SVVhsHl2GodDLVTb8OT3fxYIB9EU8Il07AMfDcjpydOcJduCFPOsQYd7BA==
+"@angular-devkit/core@13.3.8":
+  version "13.3.8"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-13.3.8.tgz#f4043de67155816e61b174233881fc0e8704d0fd"
+  integrity sha512-PCmfMkErpnH429l1cANak4PnCpAscqAubS6Dw83++cS34ht0/bgKRb2zSyBuB2Ka6kw7wAZ3fCyTcVvyfxVFEg==
   dependencies:
-    "@angular-devkit/core" "13.3.7"
+    ajv "8.9.0"
+    ajv-formats "2.1.1"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.6.7"
+    source-map "0.7.3"
+
+"@angular-devkit/schematics@13.3.8":
+  version "13.3.8"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-13.3.8.tgz#e7f5804bdd05b882ebedeabca7544a6a30387748"
+  integrity sha512-7mTlxZhS9uHxtmOiZeSMkKdIE5r5FmQ/1IBhRBfD5XDQdipQkUJyOtclPO/+t/AJIG0+LYt9+7X5hHUr7W3kZA==
+  dependencies:
+    "@angular-devkit/core" "13.3.8"
     jsonc-parser "3.0.0"
     magic-string "0.25.7"
     ora "5.4.1"
@@ -215,15 +235,15 @@
   optionalDependencies:
     parse5 "^5.0.0"
 
-"@angular/cli@~13.3.7":
-  version "13.3.7"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-13.3.7.tgz#e8fe8dc1877f87a5b3b71c20375e407ca54bb9ed"
-  integrity sha512-XIp0w0YOwhHp4Je3npHAs0W4rjHvFnG2w/lDO2M/UNp5634S4PRMFmVVMt6DQBj1cbffYVKFqffqesyCqNuvAQ==
+"@angular/cli@~13.3.8":
+  version "13.3.8"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-13.3.8.tgz#f072ade832f59edfea90b6b0a7cbe1351fb7707c"
+  integrity sha512-dsvum8oGnbgX5mLh9CDzP1ip2UGDZdppPD6np2XXhqX75DfJxRlgl4u3NxBSnDmeyhIGTsGV0HKAxoB5EOoHcw==
   dependencies:
-    "@angular-devkit/architect" "0.1303.7"
-    "@angular-devkit/core" "13.3.7"
-    "@angular-devkit/schematics" "13.3.7"
-    "@schematics/angular" "13.3.7"
+    "@angular-devkit/architect" "0.1303.8"
+    "@angular-devkit/core" "13.3.8"
+    "@angular-devkit/schematics" "13.3.8"
+    "@schematics/angular" "13.3.8"
     "@yarnpkg/lockfile" "1.1.0"
     ansi-colors "4.1.1"
     debug "4.3.3"
@@ -1662,13 +1682,13 @@
     tslib "^2.3.0"
     yargs-parser "20.0.0"
 
-"@schematics/angular@13.3.7":
-  version "13.3.7"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-13.3.7.tgz#d13e596de6dedabd9e0ad42ea8880e53df6a639a"
-  integrity sha512-OAny1e/yliku52xG7vfWs1hNYSgCNTPpMv9fS8zz9eF5/GrKv28WFSy20mUXqLZ91VsbGSs6X0mI6pdNnpVtJA==
+"@schematics/angular@13.3.8":
+  version "13.3.8"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-13.3.8.tgz#88daf0f4d3e2eac36e2f7933c54dd91bbea53ca9"
+  integrity sha512-VKRTTNYX5OsaJ6sWlCIuU71qihV3ysNNJ49wqLedOlWm1v0GMwoyGMCTJk9OZab1rpo/tYfLTcUlYqP3l6GVDQ==
   dependencies:
-    "@angular-devkit/core" "13.3.7"
-    "@angular-devkit/schematics" "13.3.7"
+    "@angular-devkit/core" "13.3.8"
+    "@angular-devkit/schematics" "13.3.8"
     jsonc-parser "3.0.0"
 
 "@tootallnate/once@1":
@@ -6578,7 +6598,7 @@ semver@7.3.4:
   dependencies:
     lru-cache "^6.0.0"
 
-semver@7.3.5, semver@^7.0.0, semver@^7.1.1, semver@^7.2.1, semver@^7.3.4, semver@^7.3.5:
+semver@7.3.5:
   version "7.3.5"
   resolved "https://registry.yarnpkg.com//semver/-/semver-7.3.5.tgz#0b621c879348d8998e4b0e4be94b3f12e6018ef7"
   integrity sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==
@@ -6595,7 +6615,7 @@ semver@^6.0.0, semver@^6.1.1, semver@^6.1.2, semver@^6.3.0:
   resolved "https://registry.yarnpkg.com//semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
-semver@^7.3.7:
+semver@^7.0.0, semver@^7.1.1, semver@^7.2.1, semver@^7.3.4, semver@^7.3.5, semver@^7.3.7:
   version "7.3.7"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.7.tgz#12c5b649afdbf9049707796e22a4028814ce523f"
   integrity sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==
